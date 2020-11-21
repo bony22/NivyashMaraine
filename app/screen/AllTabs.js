@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text,StyleSheet,Dimensions,TextInput,Image,Modal,ScrollView,StatusBar,Pressable} from 'react-native';
 import {  Card, Left, CardItem,Item, Input,Icon,Label,Button, Right,Tab, Tabs,TabHeading } from 'native-base';
-// import BookingHistory from '../BookingHistory/BookingHistory';
+//  import BookingHistory from '../BookingHistory/BookingHistory';
+import WorkPlan from './WorkPlan';
 // import Clinic from '../Clinic/Clinic';
 // import PaymentDetails from '../PaymentDetails/PaymentDetails';
 // import TestDetails from '../TestDetails/TestDetails';
@@ -60,7 +61,7 @@ export default class PaymentHistory extends Component {
                  
                  activeTabStyle={{backgroundColor:'#0A8C16'}}  >
                 
-                    {/* <BookingHistory/> */}
+                    <WorkPlan />
                     {/* doctorDetails={this.state.chatinfo} */}
                    
 

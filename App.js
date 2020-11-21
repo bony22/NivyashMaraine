@@ -10,6 +10,7 @@ import { DraweItems, createDrawerNavigator } from 'react-navigation-drawer'
 import LogIn from './app/screen/LogIn';
 import Launch from './app/screen/Launch';
 import AllTabs from './app/screen/AllTabs';
+import AllTab2 from './app/screen/AllTab2';
 
 
 
@@ -20,6 +21,7 @@ const ScreenStack = createStackNavigator(
     Home:Launch,
     Login:LogIn,
     AllTabs:AllTabs,
+    AllTab2:AllTab2
    
 
   },

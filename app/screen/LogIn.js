@@ -280,7 +280,7 @@ export default class LogIn extends Component {
 
 
                                         <Pressable
-                                             onPress={() => this.props.navigation.navigate('AllTabs')}
+                                             onPress={() => this.props.navigation.navigate('AllTab2')}
                                           //  onPress={() => this.mylogin()}
                                             style={{
                                                 height: 50, width: '40%',
