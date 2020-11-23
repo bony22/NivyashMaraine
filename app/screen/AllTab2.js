@@ -72,12 +72,12 @@ change4 = () => {
                             </View>
                         </Pressable>
                         <View style={{ width: '60%', marginTop: 18, }}>
-                            <Text style={{ color: '#ffffff', fontSize: 18, fontWeight: 'bold', marginLeft: 20 }}>Booking History</Text>
+                            <Text style={{ color: '#ffffff', fontSize: 18, fontWeight: 'bold', marginLeft: 20 }}>All Tabs</Text>
                         </View>
 
-                    </View>
+         </View>
         
-      <View style={{flex:1,alignItems:'center',height:100}}>
+      <View style={{alignItems:'center'}}>
 
 
           
@@ -97,7 +97,7 @@ change4 = () => {
 
                                     }}>
                                     <Text
-                                        style={[(this.state.status) ? styles.selectstyle : styles.unselectstyle]}>Work Plan</Text>
+                                        style={[(this.state.status ==1) ? styles.selectstyle : styles.unselectstyle]}>Work Plan</Text>
                                 </Pressable>
 
 
@@ -108,7 +108,7 @@ change4 = () => {
 
 
                                     }}>
-                                    <Text style={[(this.state.status) ? styles.unselectstyle : styles.selectstyle]}>Yard</Text>
+                                    <Text style={[(this.state.status==2) ? styles.selectstyle : styles.unselectstyle]}>Yard</Text>
                                 </Pressable>
 
                                 <Pressable 
@@ -119,7 +119,7 @@ change4 = () => {
 
                                     }}>
                                     <Text
-                                        style={[(this.state.status) ? styles.selectstyle : styles.unselectstyle]}>Vessel</Text>
+                                        style={[(this.state.status==3) ? styles.selectstyle : styles.unselectstyle]}>Vessel</Text>
                                 </Pressable>
 
                                 <Pressable
@@ -129,7 +129,7 @@ change4 = () => {
 
 
                                     }}>
-                                    <Text style={[(this.state.status) ? styles.unselectstyle : styles.selectstyle]}>Environment</Text>
+                                    <Text style={[(this.state.status==4) ? styles.selectstyle : styles.unselectstyle]}>Environment</Text>
                                 </Pressable>
 
                                 
@@ -142,6 +142,7 @@ change4 = () => {
       
       </View>
                                     {
+                                        
                                     this.state.status == 1? 
                                     (<WorkPlan/>)
                                      : 
@@ -154,15 +155,7 @@ change4 = () => {
                                          (<Enviorment />)
 
                                          
-                                         }
-
-                                   
-
-
-
-
-
-
+                                    }
 
       </View>
     );
@@ -221,21 +214,20 @@ const styles = StyleSheet.create({
         fontFamily: 'Poppins-Medium',
         fontSize: 16,
         color: '#45be92',
-
         textDecorationLine: 'underline'
 
     },
     unselectstyle: {
         fontFamily: 'Poppins-Medium',
         fontSize: 16,
-        color: 'red',
+        color: 'grey',
 
 
 
     },
 
     Upper: {
-        backgroundColor: '#147BDF',
+       backgroundColor: '#147BDF',
         height: 60,
         justifyContent: 'flex-start',
         alignItems: 'flex-start',

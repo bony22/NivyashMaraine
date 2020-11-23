@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Dimensions, TextInput, Image, Pressable, ToastAndroid, ImageBackground, StatusBar, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, TextInput, Image, Pressable, ToastAndroid, ImageBackground, StatusBar, ScrollView,Alert,Platform,Net } from 'react-native';
 import { Container, Right, Icon, Picker } from 'native-base';
-
 import Statbar from './IndexStatusbar/Statbar';
-
+import Auth from '../service/Auth';
 const { width, height } = Dimensions.get('window')
 
 export default class LogIn extends Component {
@@ -12,39 +11,35 @@ export default class LogIn extends Component {
         this.state = {
 
             // status: true,
-            status: this.props.navigation.getParam('status', true),
+            // status: this.props.navigation.getParam('status', true),
             email: '',
             password: '',
-            type: '',
-            otp: '',
-            user_info: '',
-            account: {},
-            name:'',
-
-
-            lastname:'',
-            biography:'',            
-            companyname:'',
-            facebook:'',
-            twitter:'',
-            instagram:'',
-            linkedin:'',
-            skype:'',
-            github:'',
+           pwd:'',
+           user:'',
         
             picker_value: [
                 { value: 'PM' },
                 { value: 'TM' },
 
-            ]
+            ],
+            userdetails:{}
 
         };
     }
 
 
     async componentDidMount() {
-        // StatusBar.setBackgroundColor('white')
-        // StatusBar.setBarStyle( 'light-content',true)
+      
+        var useremail =await Auth.getAccount();
+         var userpwd =await Auth.getPassWord();
+         this.setState({
+             pwd:userpwd,
+             user:useremail
+         })
+
+        // var user =await Auth.getAccount();
+        console.log('passworddddd',this.state.pwd)
+         console.log('usernameeeeeeeeee',this.state.user)
     }
     change = () => {
         this.setState({
@@ -60,55 +55,85 @@ export default class LogIn extends Component {
     }
 
     mylogin = async () => {
-        console.log(this.state.email)
+
+        let data = {
+            
+            username: this.state.email,
+           
+            password: this.state.password, 
+        }
+        // const pwd1 = getPassWord()
+        // const user1 = getAccount()
 
 
         if (this.state.email != '' && this.state.password != '') {
-            let data = {
-                email: this.state.email,
-                password: this.state.password,
-                type: this.state.type,
 
-            }
-            let info = await Auth.login(data);
-            console.log('info', info)
-            if (info && info.status == true) {
+        if(this.state.user.username == ''  && this.state.pwd == '')
+        {
+         if(this.state.user.username == this.state.email && this.state.pwd == this.state.password){
+
+            ToastAndroid.show('Login successfully!!!', ToastAndroid.SHORT);
+            this.props.navigation.navigate('AllTab2')
+         }
+        
+         else{
+            ToastAndroid.show('No username against this !!', ToastAndroid.SHORT);
+         }
+        }
+         else{
+
+                const url = 'https://nivyash.geoalgo.in/user/login'
+
+
+                console.log(url)
+                const rawResponse = await fetch(url, {
+
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+
+
+                    },
+                    body: JSON.stringify(data)
+                    // body:data
+                });
+                const content = await rawResponse.json();
+
                 this.setState({
-                    account: info,
+                    userdetails: content,
+                    // indicatorLoading: false,
+
+
                 })
 
-                // await Auth.setAccount(this.state.account);
-                ToastAndroid.show('Login Successfully', ToastAndroid.SHORT);
-                Navigation.navigate('Board');
+                console.log(content);
+               
 
+              
+                    ToastAndroid.show('Login successfully!!!', ToastAndroid.SHORT);
+                    await Auth.setAccount(this.state.userdetails.data);
+                    await Auth.setPassWord(this.state.password);
+                    var pwd =await Auth.getPassWord();
+                    var user =await Auth.getAccount();
+                    console.log('password',pwd)
+                    console.log('username',user)
+                    console.log('userdetail',this.state.userdetails)
 
-            } else {
-                ToastAndroid.show('Invalid email or Password', ToastAndroid.SHORT)
-            }
-        }
-        else {
-            ToastAndroid.show('Please input all fields', ToastAndroid.SHORT)
+                    this.props.navigation.navigate('AllTab2')
+
+       
+       
         }
     }
 
-    mysignin = async () => {
-        // console.log(this.state.email)
-
-
-        if (this.state.email != '' && this.state.password != '' && this.state.name!=''&& this.state.type!='') {
-            let data = {
-                email: this.state.email,
-                password: this.state.password,
-                type: this.state.type,
-                firstname:this.state.name,
-            }
-            // let info = await Auth.register(data);
-            console.log('infoooooo', info)
-           
-        }
         else {
-            ToastAndroid.show('Please input all fields', ToastAndroid.SHORT)
+            Alert.alert(
+                'please enter all fields correctly'
+            )
         }
+        
+
     }
 
 
@@ -270,18 +295,18 @@ export default class LogIn extends Component {
                                     <View style={{ height: 50, width: '90%', justifyContent: "center", alignItems: 'center' }} />
 
                                     <View style={{ height: 20, width: '90%', justifyContent: "center", alignItems: 'center', marginTop: 10 }}>
-                                        <Text style={{
+                                        {/* <Text style={{
                                             fontFamily: 'OpenSans',
                                             fontSize: 16,
                                             color: 'white',
-                                        }}>Forgot Password?</Text>
+                                        }}>Forgot Password?</Text> */}
 
 
 
 
                                         <Pressable
-                                             onPress={() => this.props.navigation.navigate('AllTab2')}
-                                          //  onPress={() => this.mylogin()}
+                                           //  onPress={() => this.props.navigation.navigate('AllTab2')}
+                                           onPress={() => this.mylogin()}
                                             style={{
                                                 height: 50, width: '40%',
                                                 justifyContent: 'center',

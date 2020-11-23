@@ -20,7 +20,7 @@ const ScreenStack = createStackNavigator(
     
     Home:Launch,
     Login:LogIn,
-    AllTabs:AllTabs,
+    //AllTabs:AllTabs,
     AllTab2:AllTab2
    
 

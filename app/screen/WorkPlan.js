@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView, StyleSheet, Dimensions, Image, TextInput, TouchableOpacity, Pressable, ImageBackground, Alert, ToastAndroid } from 'react-native'
-import { Card, Left, CardItem, Item, Input, Label, Button, Right, Container, Icon, Picker } from 'native-base';
+import { Card, Left, CardItem, Item, Input, Label, Button, Right, Container, Icon, Picker, Textarea } from 'native-base';
 const { height, width } = Dimensions.get("window")
 export default class WorkPlan extends Component {
     constructor(props) {
@@ -11,13 +11,19 @@ export default class WorkPlan extends Component {
                 { value: 'PM' },
                 { value: 'TM' },
 
+            ],
+            picker_value1: [
+                { value: 'N/A' },
+                { value: 'YES' },
+                { value: 'NO' },
+
             ]
         };
     }
 
     render() {
         return (
-            <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1, backgroundColor: 'white', }}>
+            <View style={{ flex: 1 }}>
 
 
                 <ScrollView style={{ width: '100%' }}>
@@ -25,7 +31,8 @@ export default class WorkPlan extends Component {
                         width: '100%', backgroundColor: 'white',
                         alignItems: 'center',
                         justifyContent: 'center'
-                    }}>
+                    }}
+                    >
                         <View style={{ height: 70, width: width - 20, marginTop: 20, alignSelf: 'center' }}>
 
 
@@ -48,7 +55,8 @@ export default class WorkPlan extends Component {
                             height: 50, width: '98%', alignItems: 'center', flexDirection: "row",
                             justifyContent: 'space-between',
                             alignSelf: 'center',
-                        }}>
+                        }}
+                        >
                             <Text style={styles.unselectstyle}>
                                 Name of HSE MANAGER
 
@@ -80,8 +88,6 @@ export default class WorkPlan extends Component {
                                 >
 
 
-
-
                                     {
                                         this.state.picker_value.map((item, index) => {
                                             return (
@@ -95,13 +101,14 @@ export default class WorkPlan extends Component {
                                 </Picker>
 
                             </View>
+
                         </View>
 
 
                         <View style={{
                             height: 50, width: '98%', alignItems: 'center', flexDirection: "row", marginTop: 10,
                             justifyContent: 'space-between',
-                            alignSelf: 'center',
+                            alignSelf: 'center', borderWidth: 1
                         }}>
                             <Text style={styles.unselectstyle}>
                                 Name of Site Supdt
@@ -163,7 +170,16 @@ export default class WorkPlan extends Component {
                                 </Text>
 
 
+
+
                         </View>
+
+                        
+                        <View style={{ justifyContent:'flex-start', alignItems: 'center', width:'100%', alignSelf: 'center' ,flexDirection:'row'}}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold', marginLeft:12}}>
+                                        Yard
+                            </Text>
+                                </View>
 
 
 
@@ -207,19 +223,18 @@ export default class WorkPlan extends Component {
 
                         <View style={{ width: '100%', alignItems: 'center', flexDirection: 'row', }}>
 
+                            
+
                             <View style={{ width: '30%', flexDirection: 'column', alignItems: 'center' }}>
 
 
-                                <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, width: 80, alignSelf: 'center' }}>
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold' }}>
-                                        Yard
-                            </Text>
-                                </View>
+
+                                <View style={{height:135}}></View>
 
 
-                                <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, width: 80, alignSelf: 'center' }}>
+                                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center',borderWidth:1 ,height:100}}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, marginRight: 10 }}>
                                         Hot work
 
                                     </Text>
@@ -228,7 +243,9 @@ export default class WorkPlan extends Component {
                                 </View>
 
 
-                                <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, width: 80, alignSelf: 'center' }}>
+
+
+                                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center',margin:10,height:100}}>
 
                                     <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, }}>
                                         Lifting-shifting
@@ -241,7 +258,7 @@ export default class WorkPlan extends Component {
 
                                 </View>
 
-                                <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, width: 80, alignSelf: 'center' }}>
+                                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center',margin:10,height:100 }}>
 
                                     <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, }}>
                                         IHM material disposal
@@ -254,7 +271,7 @@ export default class WorkPlan extends Component {
 
                                 </View>
 
-                                <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, width: 80, alignSelf: 'center' }}>
+                                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center' ,margin:10,height:100}}>
 
                                     <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, }}>
                                         Loading-unloading
@@ -273,119 +290,1224 @@ export default class WorkPlan extends Component {
                             <ScrollView
                                 horizontal={true}
 
+
                             >
-                                <View style={{ justifyContent: 'flex-start', alignItems: 'center' }}>
-                                    <View style={{  borderWidth: 1, flexDirection: 'row' }}>
+                                <View style={{ flex: 1 }}>
+                                    <View style={{ borderWidth: 1, flexDirection: 'row', alignItems: 'center', margin: 10,height:100 }}>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10,  alignSelf: 'center' }}>
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold' }}>
+                                            <Text numberOfLines={2}
+                                                style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold', }}>
                                                 Yes/No/Na
                                             </Text>
 
-
                                         </View>
 
-                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', marginTop: 10,  alignSelf: 'center' }}>
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold' }}>
+                                            <Text numberOfLines={3}
+                                                style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold' }}>
                                                 RA/JHA Prepared- HKC 3.3.3
 
                                             </Text>
 
 
+
+
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10,  alignSelf: 'center' }}>
+                                        <View style={{
+                                            justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center',
+                                            width: 100
+                                        }}>
 
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold' }}>
-                                                Yes/No/Na
+                                            <Text numberOfLines={2}
+                                                style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold' }}>
+                                                Permit made
+
                                             </Text>
 
 
-                                        </View>
-
-                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', marginTop: 10,  alignSelf: 'center' }}>
-
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold' }}>
-                                                RA/JHA Prepared- HKC 3.3.3
-
-                                            </Text>
-
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10,  alignSelf: 'center' }}>
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center', width: 100 }}>
 
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold' }}>
-                                                Yes/No/Na
-                                            </Text>
+                                            <Text numberOfLines={4} style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold' }}>
+                                                Subject covered in tool box briefing
 
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', marginTop: 10,  alignSelf: 'center' }}>
-
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold' }}>
-                                                RA/JHA Prepared- HKC 3.3.3
 
                                             </Text>
 
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', marginTop: 10,  alignSelf: 'center' }}>
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center', width: 100 }}>
 
                                             <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold' }}>
-                                                RA/JHA Prepared- HKC 3.3.3
+                                                Photos
 
                                             </Text>
 
 
+
                                         </View>
 
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center', width: 100 }}>
+
+                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold' }}>
+                                                Remarks
+
+
+                                            </Text>
+
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 18, fontWeight: 'bold' }}>
+                                                Yard Actions
+
+
+                                            </Text>
+                                        </View>
+                                    </View>
+
+                                    {/* picker box gulo for hot work */}
+
+                                    <View style={{ borderWidth: 1, flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100,height:100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+                                        </View>
+
+                                       
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
 
 
 
 
 
 
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
 
 
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                        <View style={{ height: 50, width: '100%', flexDirection: 'row',}}>
+                                   
+                                    <View style={{ width: '70%' ,marginLeft:10}}>
+                                        <Button 
+                                        //onPress={() => this.imageHandler()}
+                                            style={styles.chooseButton}
+                                        >
+                                            <Text style={{ color: '#000' }}>Choose File</Text>
+                                        </Button>
+                                    </View>
+                                </View>
+
+                                                
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+
+                                                    <TextInput 
+                                                    placeholder='remarks'
+
+                                                    multiline={true}>
+
+                                                    </TextInput>
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+                                        </View>
+                                    </View>
+
+
+                                    {/* LIFT ND SHIFT PICKER */}
+
+
+                                    <View style={{ borderWidth: 1, flexDirection: 'row', alignItems: 'center', margin: 10, height:100}}>
+
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+
+
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+
+
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+                                        </View>
+                                    </View>
+
+                                    {/* ihm er picker */}
+
+                                    <View style={{ borderWidth: 1, flexDirection: 'row', alignItems: 'center', margin: 10, height:100}}>
+
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+
+
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+
+
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+                                        </View>
+                                    </View>
+
+                                    {/* loading er picker */}
+
+                                    <View style={{ borderWidth: 1, flexDirection: 'row', alignItems: 'center', margin: 10, height:100}}>
+
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+
+
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+
+
+
+
+                                        </View>
+
+                                        <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+
+                                            <View style={{
+                                                height: 35, width: 80, justifyContent: 'center',
+                                                //  marginBottom: 13,
+                                                // marginRight: 15,
+                                                //  justifyContent: 'flex-start',
+                                                alignItems: 'center',
+                                                // backgroundColor: '#1273DE',
+                                                // marginLeft: 20,
+                                                borderWidth: 1,
+                                                borderColor: 'grey',
+
+
+
+                                            }}>
+                                                <Picker
+                                                    mode="dropdown"
+                                                    placeholder="Type Of users"
+                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
+                                                    style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
+                                                    // selectedValue={this.state.selected}
+                                                    // onValueChange={this.onValueChange.bind(this)}
+                                                    onValueChange={(value) => this.setState({ type: value })}
+                                                    selectedValue={this.state.type}
+                                                >
+
+
+
+
+                                                    {
+                                                        this.state.picker_value1.map((item, index) => {
+                                                            return (
+                                                                <Picker.Item label={item.value} value={item.value} key={index} />
+                                                            )
+                                                        })
+                                                    }
+
+
+
+                                                </Picker>
+
+
+                                            </View>
+
+
+                                        </View>
                                     </View>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
                                 </View>
+
+
+
                             </ScrollView>
 
 
+
                         </View>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -462,5 +1584,16 @@ const styles = StyleSheet.create({
 
 
     },
+
+    chooseButton: {
+        borderBottomWidth: 1,
+        backgroundColor: '#D6DBDF',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 80,
+        height: 30,
+        marginTop: 10,
+        marginLeft: 5
+    }
 
 })
