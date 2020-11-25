@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Dimensions, TextInput, Image, Pressable, ToastAndroid, ImageBackground, StatusBar, ScrollView,Alert,Platform,Net } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, TextInput, Image, Pressable, ToastAndroid, ImageBackground, StatusBar, ScrollView, Alert, Platform, Net } from 'react-native';
 import { Container, Right, Icon, Picker } from 'native-base';
 import Statbar from './IndexStatusbar/Statbar';
 import Auth from '../service/Auth';
+import NetInfo from "@react-native-community/netinfo";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import AllTab2 from './AllTab2';
+
 const { width, height } = Dimensions.get('window')
 
 export default class LogIn extends Component {
@@ -14,53 +18,80 @@ export default class LogIn extends Component {
             // status: this.props.navigation.getParam('status', true),
             email: '',
             password: '',
-           pwd:'',
-           user:'',
-        
+            pwd: '',
+            user: '',
+            netstatus: true,
+            isConnected: true,
             picker_value: [
                 { value: 'PM' },
                 { value: 'TM' },
 
             ],
-            userdetails:{}
+            userdetails: {}
 
         };
     }
 
 
     async componentDidMount() {
-      
-        var useremail =await Auth.getAccount();
-         var userpwd =await Auth.getPassWord();
-         this.setState({
-             pwd:userpwd,
-             user:useremail
-         })
+
+        var useremail = await Auth.getAccount();
+        var userpwd = await Auth.getPassWord();
+        this.setState({
+            pwd: userpwd,
+            user: useremail
+        })
 
         // var user =await Auth.getAccount();
-        console.log('passworddddd',this.state.pwd)
-         console.log('usernameeeeeeeeee',this.state.user)
+        console.log('passworddddd', this.state.pwd)
+        console.log('usernameeeeeeeeee', this.state.user)
+        // this.CheckConnectivity()
+        // console.log('netstatus', this.state.netstatus)
+
     }
+
+
     change = () => {
         this.setState({
             status: false
         })
 
     }
+
     change1 = () => {
+
         this.setState({
             status: true
         })
 
     }
 
+    CheckConnectivity = async () => {
+        // For Android devices
+        if (Platform.OS === "android") {
+            NetInfo.isConnected.fetch().then(isConnected => {
+                if (isConnected == true) {
+                    Alert.alert("You are online!");
+                }
+                else {
+                    Alert.alert('you r offline')
+                    this.setState({
+                        netstatus: false
+                    })
+
+                }
+            })
+        }
+    }
+
+
     mylogin = async () => {
 
         let data = {
-            
+
             username: this.state.email,
-           
-            password: this.state.password, 
+
+            password: this.state.password,
         }
         // const pwd1 = getPassWord()
         // const user1 = getAccount()
@@ -68,24 +99,20 @@ export default class LogIn extends Component {
 
         if (this.state.email != '' && this.state.password != '') {
 
-        if(this.state.user.username == ''  && this.state.pwd == '')
-        {
-         if(this.state.user.username == this.state.email && this.state.pwd == this.state.password){
+            console.log('object', data)
 
-            ToastAndroid.show('Login successfully!!!', ToastAndroid.SHORT);
-            this.props.navigation.navigate('AllTab2')
-         }
-        
-         else{
-            ToastAndroid.show('No username against this !!', ToastAndroid.SHORT);
-         }
-        }
-         else{
 
+
+            if (this.state.netstatus == true) {
+
+
+
+                // this.CheckConnectivity()
                 const url = 'https://nivyash.geoalgo.in/user/login'
 
 
                 console.log(url)
+
                 const rawResponse = await fetch(url, {
 
                     method: 'POST',
@@ -98,6 +125,7 @@ export default class LogIn extends Component {
                     body: JSON.stringify(data)
                     // body:data
                 });
+
                 const content = await rawResponse.json();
 
                 this.setState({
@@ -108,31 +136,54 @@ export default class LogIn extends Component {
                 })
 
                 console.log(content);
-               
 
-              
-                    ToastAndroid.show('Login successfully!!!', ToastAndroid.SHORT);
-                    await Auth.setAccount(this.state.userdetails.data);
-                    await Auth.setPassWord(this.state.password);
-                    var pwd =await Auth.getPassWord();
-                    var user =await Auth.getAccount();
-                    console.log('password',pwd)
-                    console.log('username',user)
-                    console.log('userdetail',this.state.userdetails)
 
-                    this.props.navigation.navigate('AllTab2')
 
-       
-       
+                ToastAndroid.show('Login successfully!!!', ToastAndroid.SHORT);
+                await Auth.setAccount(this.state.userdetails.data);
+                await Auth.setPassWord(this.state.password);
+                // AsyncStorage.multiSet([
+                //     ["email", this.state.userdetails.data],
+                //     ["password", this.state.password]
+                // ])
+
+                // var pwd = await Auth.getPassWord();
+                // var user = await Auth.getAccount();
+                // console.log('password', pwd)
+                // console.log('username', user)
+                console.log('userdetail', this.state.userdetails)
+
+                this.props.navigation.navigate('AllTabs')
+                // Navigation.navigate(AllTab2)
+
+
+            }
+
+            else {
+                Alert.alert("You are offline!");
+
+                if (this.state.user.username == '' && this.state.pwd == '') {
+                    if (this.state.user.username == this.state.email && this.state.pwd == this.state.password) {
+
+                        ToastAndroid.show('Login successfully!!!', ToastAndroid.SHORT);
+                        this.props.navigation.navigate('AllTab2')
+                    }
+
+                    else {
+                        ToastAndroid.show('No username against this !!', ToastAndroid.SHORT);
+                    }
+                }
+            }
+            //  });
         }
-    }
+
 
         else {
             Alert.alert(
                 'please enter all fields correctly'
             )
         }
-        
+
 
     }
 
@@ -144,7 +195,7 @@ export default class LogIn extends Component {
         return (
             <View style={{ flex: 1, alignItems: 'center' }}>
                 {/* <StatusBar barStyle="light-content" backgroundColor='#147BDF' /> */}
-                <Statbar/>
+                <Statbar />
                 <View style={{ justifyContent: 'center', width: '100%', flex: 1, backgroundColor: '#147BDF' }}>
                     <ScrollView style={{ flex: 1 }}>
 
@@ -225,14 +276,14 @@ export default class LogIn extends Component {
                                 justifyContent: 'flex-start',
                                 alignSelf: 'center',
                             }}>
-                                <Pressable 
-                                //onPress={() => this.change1()}
+                                <Pressable
+                                    //onPress={() => this.change1()}
                                     style={{
                                         height: 50, width: '40%',
 
                                     }}>
                                     <Text
-                                        style={ styles.unselectstyle}>LOGIN</Text>
+                                        style={styles.unselectstyle}>LOGIN</Text>
                                 </Pressable>
                                 {/* <Pressable onPress={() => this.change()}
                                     style={{
@@ -243,59 +294,59 @@ export default class LogIn extends Component {
                                 </Pressable> */}
 
                             </View>
-                          
-                                <View style={{ height: 250, width: '100%', justifyContent: "flex-start", alignItems: 'center' }}>
-                                    <View style={{
-                                        height: 50, width: '90%', justifyContent: "center", alignItems: 'center', backgroundColor: '#1273DE',
 
-                                    }}>
-                                        <TextInput placeholder='Email'
-                                            placeholderTextColor='white'
-                                            style={{
-                                                height: 50, width: '100%', marginTop: 5, backgroundColor: '#1273DE', fontFamily: 'Poppins-Medium',
-                                                fontSize: 16,
-                                                color: 'white', padding: 10
-                                            }}
-                                            onChangeText={(value) => this.setState({ email: value })}
-                                            value={this.state.email}
-                                        >
+                            <View style={{ height: 250, width: '100%', justifyContent: "flex-start", alignItems: 'center' }}>
+                                <View style={{
+                                    height: 50, width: '90%', justifyContent: "center", alignItems: 'center', backgroundColor: '#1273DE',
 
-                                        </TextInput>
+                                }}>
+                                    <TextInput placeholder='Email'
+                                        placeholderTextColor='white'
+                                        style={{
+                                            height: 50, width: '100%', marginTop: 5, backgroundColor: '#1273DE', fontFamily: 'Poppins-Medium',
+                                            fontSize: 16,
+                                            color: 'white', padding: 10
+                                        }}
+                                        onChangeText={(value) => this.setState({ email: value })}
+                                        value={this.state.email}
+                                    >
 
-
-                                    </View>
-                                    {/* <View style={{height:20,width:'90%',justifyContent:"center",alignItems:'center'}}/> */}
+                                    </TextInput>
 
 
-                                    <View style={{
-                                        height: 60, width: '90%', justifyContent: "center", alignItems: 'center',
-                                        backgrondColor: '#1273DE',
-                                        marginTop: 10
-                                        //  backgroundColor:'red',
-                                    }}>
-                                        <TextInput placeholder='Password'
-                                            placeholderTextColor='white'
-
-                                            style={{
-                                                height: 60, width: '100%', marginTop: 5, fontFamily: 'Poppins-Medium', backgroundColor: '#1273DE',
-                                                fontSize: 16,
-                                                color: 'white',
-                                                padding: 10
-                                            }}
-                                            onChangeText={(value) => this.setState({ password: value })}
-                                            value={this.state.password}
-                                        >
-
-                                        </TextInput>
+                                </View>
+                                {/* <View style={{height:20,width:'90%',justifyContent:"center",alignItems:'center'}}/> */}
 
 
+                                <View style={{
+                                    height: 60, width: '90%', justifyContent: "center", alignItems: 'center',
+                                    backgrondColor: '#1273DE',
+                                    marginTop: 10
+                                    //  backgroundColor:'red',
+                                }}>
+                                    <TextInput placeholder='Password'
+                                        placeholderTextColor='white'
+
+                                        style={{
+                                            height: 60, width: '100%', marginTop: 5, fontFamily: 'Poppins-Medium', backgroundColor: '#1273DE',
+                                            fontSize: 16,
+                                            color: 'white',
+                                            padding: 10
+                                        }}
+                                        onChangeText={(value) => this.setState({ password: value })}
+                                        value={this.state.password}
+                                    >
+
+                                    </TextInput>
 
 
-                                    </View>
-                                    <View style={{ height: 50, width: '90%', justifyContent: "center", alignItems: 'center' }} />
 
-                                    <View style={{ height: 20, width: '90%', justifyContent: "center", alignItems: 'center', marginTop: 10 }}>
-                                        {/* <Text style={{
+
+                                </View>
+                                <View style={{ height: 50, width: '90%', justifyContent: "center", alignItems: 'center' }} />
+
+                                <View style={{ height: 20, width: '90%', justifyContent: "center", alignItems: 'center', marginTop: 10 }}>
+                                    {/* <Text style={{
                                             fontFamily: 'OpenSans',
                                             fontSize: 16,
                                             color: 'white',
@@ -304,30 +355,30 @@ export default class LogIn extends Component {
 
 
 
-                                        <Pressable
-                                           //  onPress={() => this.props.navigation.navigate('AllTab2')}
-                                           onPress={() => this.mylogin()}
-                                            style={{
-                                                height: 50, width: '40%',
-                                                justifyContent: 'center',
-                                                alignItems: 'center',
-                                                backgroundColor: '#2dd8cf',
-                                            }}>
-                                            <Text style={{
-                                                fontFamily: 'OpenSans',
-                                                fontSize: 16,
-                                                color: 'white'
-                                            }}>LOGIN</Text>
-                                        </Pressable>
-                                    </View>
-
-
-
+                                    <Pressable
+                                         // onPress={() => this.props.navigation.navigate('AllTabs')}
+                                        onPress={() => this.mylogin()}
+                                        style={{
+                                            height: 50, width: '40%',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            backgroundColor: '#2dd8cf',
+                                        }}>
+                                        <Text style={{
+                                            fontFamily: 'OpenSans',
+                                            fontSize: 16,
+                                            color: 'white'
+                                        }}>LOGIN</Text>
+                                    </Pressable>
                                 </View>
-                                {/* : */}
 
 
-                                {/* <View style={{ height: 300, width: '100%', justifyContent: "flex-start", alignItems: 'center', }}>
+
+                            </View>
+                            {/* : */}
+
+
+                            {/* <View style={{ height: 300, width: '100%', justifyContent: "flex-start", alignItems: 'center', }}>
 
                                     <View style={{
                                         height: 60, width: '90%', justifyContent: "center", alignItems: 'center', backgroundColor: '#1273DE',
@@ -428,8 +479,8 @@ export default class LogIn extends Component {
 
 
 
-                                {/* </View> */}
-                            
+                            {/* </View> */}
+
 
                         </View>
 

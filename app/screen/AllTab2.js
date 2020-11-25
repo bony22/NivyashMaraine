@@ -6,6 +6,7 @@ import WorkPlan from './WorkPlan';
 import Vessel from './Vessel';
 import Enviorment from './Enviorment';
 import Yard from './Yard';
+import Auth from '../service/Auth';
 
 // import Clinic from '../Clinic/Clinic';
 // import PaymentDetails from '../PaymentDetails/PaymentDetails';
@@ -21,6 +22,7 @@ export default class AllTab2 extends Component {
         // status2:0,
         // status3:0,
         // status4:0,
+        tabdetails:{}
 
     };
   }
@@ -60,10 +62,76 @@ change4 = () => {
 }
 
 
+async componentDidMount() {
+
+    this.FetchTabList();
+}
+
+
+FetchTabList = async () => {
+
+      
+    // let data = {
+        
+    //     email: this.state.email,
+       
+
+    //     first_name:this.state.frstname,
+    //     last_name: this.state.lastname,
+    //     username: this.state.username,
+     
+    //     password: this.state.password,
+
+       
+    // }
+
+
+    
+            const url = 'https://nivyash.geoalgo.in/tabs/list'
+            
+            
+            
+
+            console.log(url)
+
+            const rawResponse = await fetch(url, {
+
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+
+
+                },
+               // body: JSON.stringify(data)
+                // body:data
+            });
+            const content = await rawResponse.json();
+
+            this.setState({
+                tabdetails: content,
+                // indicatorLoading: false,
+
+
+            })
+
+            console.log(content);
+
+           
+              // ToastAndroid.show('Register successfully!!!', ToastAndroid.SHORT);
+                await Auth.getTabList(this.state.userdetails);
+                console.log('alltablist',this.state.tabdetails)
+
+               // this.props.navigation.navigate('Home')
+};
+
+
+
   render() {
     return (
 
-<View style={{flex:1}}>
+        <View style={{flex:1}}>
+
         <View style={styles.Upper}>
                         <Pressable onPress={() => this.props.navigation.navigate('OtherDetails')}>
                             <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 18, marginLeft: 15 }}>
@@ -88,8 +156,8 @@ change4 = () => {
                                
                             }}>
                                 <ScrollView
-          horizontal={true} 
-          >
+                                    horizontal={true} 
+                                >
                                 <Pressable
                                  onPress={() => this.change1()}
                                     style={{

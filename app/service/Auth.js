@@ -14,12 +14,6 @@ async function login(data)
 }
 
 
-// async function sendOtp(data)
-// {
-//     let endpoint = 'check_otp.php';
-//     return HttpClient.post(endpoint, data);
-// }
-
 
 function register(data) {
     let endpoint = 'user_registration.php';
@@ -40,6 +34,30 @@ async function getPassWord() {
 async function setPassWord(data) {
     return await Storage.set('password', data);
 }
+
+
+async function getTabList() {
+    return await Storage.get('tablist');
+}
+async function setTabList(data) {
+    return await Storage.set('tablist', data);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 async function getDark() {
@@ -64,6 +82,21 @@ export default {
     setAccount,
     getPassWord,
     setPassWord,
+    getTabList,
+    setTabList,
+
+
+
+
+
+
+
+
+
+
+
+
+
     getDark,
     setDark,
     //sendOtp

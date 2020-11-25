@@ -12,6 +12,8 @@
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.13.2",
     "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/netinfo": "^5.9.9",
+    "moment": "^2.29.1",
     "native-base": "^2.13.14",
     "react": "16.13.1",
     "react-native": "0.63.3",

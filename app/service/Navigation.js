@@ -1,6 +1,4 @@
 
-
-
 import { NavigationActions } from 'react-navigation';
 import { DrawerActions } from 'react-navigation-drawer'
 
