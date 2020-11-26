@@ -74,7 +74,7 @@ export default class Vessel extends Component {
 
             }}
             >
-              <Text style={{ fontWeight: 'bold', fontSize: 15 }} >
+              <Text style={{  fontSize: 15 }} >
                 Subject :Prevention of adverse effects to human health  </Text>
 
             </View>
@@ -241,7 +241,7 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 35 }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, }}>
                     Random verification to ascertain Safe for entry criteria is adequate inside enclosed space particularly for gas checks, emergency rescue, ventillation and lighting
 </Text>
 
@@ -308,7 +308,7 @@ export default class Vessel extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
                     <YardPicker />
 
@@ -373,7 +373,7 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 30 }}>
+                  <Text numberOfLines={4} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10,  }}>
                     Enclosed spaces are periodically monitored for gas checks by Competent person specifically after breaks.
 
 </Text>
@@ -437,7 +437,7 @@ export default class Vessel extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
                     <YardPicker />
 
@@ -495,7 +495,7 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 30 }}>
+                  <Text numberOfLines={3} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10,  }}>
                     Safe for entry certifiate adequately displayed. </Text>
 
                 </View>
@@ -560,7 +560,7 @@ export default class Vessel extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
@@ -620,8 +620,8 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
-                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 35, marginTop: 30 }}>
+                  <Text numberOfLines={5}
+                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Team working in enclosed space is under a fully trained supervisor.
 </Text>
 
@@ -690,7 +690,7 @@ export default class Vessel extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
                     <YardPicker />
 
@@ -754,7 +754,7 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={4}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 48 }}>
                     Work permit and JHA are duly issued by Competent person for all areas of Hot Work.
  </Text>
@@ -874,7 +874,7 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={4}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 52 }}>
                     Random verification to ascertain Hot work checks are effectively followed. </Text>
 
@@ -996,8 +996,8 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
-                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
+                  <Text numberOfLines={5}
+                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 55 }}>
                     Periodic verification of work conditions by competent person and specifically after breaks.</Text>
 
 
@@ -1121,7 +1121,7 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
                     Safe for Hot Work certifiate adequately displayed.
 
@@ -1249,7 +1249,7 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
                     Adequate PPE and monitoring for personnel involved towards heavy metal exposure, respiratory protection.</Text>
 
@@ -1320,6 +1320,8 @@ export default class Vessel extends Component {
 
 
 
+
+
             <View style={{
 
               height: 50, width: '100%', alignItems: 'center',
@@ -1335,6 +1337,9 @@ export default class Vessel extends Component {
 
 
 
+
+
+
             <View style={{ width: '100%', alignItems: 'center', flexDirection: 'row', }}>
 
 
@@ -1345,7 +1350,7 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
-                  <Text style={{ fontSize: 18, fontWeight: 'bold', }}>
+                  <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
                     Subject</Text>
 
 
@@ -1353,8 +1358,9 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
 
-                  <Text style={{ fontSize: 16, fontWeight: 'bold', borderWidth: 1 }}>
-                    Drums,container,pressure vessels</Text>
+                  <Text style={{ fontSize: 16, fontWeight: 'bold' }}>
+                    Drums,container,pressure vessels
+</Text>
 
 
                 </View>
@@ -1364,8 +1370,8 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
-                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginBottom: 80 }}>
+                  <Text numberOfLines={5}
+                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
                     Gas bottles in use are protected against overheating (direct sunlight or neqarby hotworks)</Text>
 
 
@@ -1374,8 +1380,8 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
-                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginBottom: 30 }}>
+                  <Text numberOfLines={5}
+                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
                     Storage and transportation carried with valve cap attached.
 </Text>
 
@@ -1385,21 +1391,35 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
-                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                  <Text numberOfLines={5}
+                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
+                    Gas cylinders are adequately secured during transportation in upright position
+
+</Text>
+                </View>
+
+
+                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
+
+                  <Text numberOfLines={5}
+                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
                     Gas bottles or the cages are marked in a specific colour
+
+
 </Text>
 
 
 
                 </View>
 
-
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
-                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 50 }}>
+                  <Text numberOfLines={5}
+                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
                     Arrangement of stoarge is adequate.
+
+
+
 </Text>
 
 
@@ -1408,9 +1428,12 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
-                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 50 }}>
+                  <Text numberOfLines={5}
+                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
                     Connectors, valves, hoses in good condition and are checked prior to use.
+
+
+
 </Text>
 
 
@@ -1419,21 +1442,9 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
-                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 50 }}>
-                    Bottles are used from upright position only and not lying down.
-</Text>
-
-
-
-                </View>
-
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
-
-                  <Text numberOfLines={2}
-                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 80 }}>
-                    Gas bottles in use are protected against overheating (direct sunlight or neqarby hotworks)</Text>
-
+                  <Text numberOfLines={5}
+                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
+                    Bottles are used from upright position only and not lying down.</Text>
 
 
                 </View>
@@ -1451,8 +1462,8 @@ export default class Vessel extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
-                      <Text numberOfLines={2}
-                        style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold', }}>
+                      <Text
+                        style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold', marginTop: 10 }}>
                         Grading</Text>
 
                     </View>
@@ -1486,44 +1497,45 @@ export default class Vessel extends Component {
                     </View>
                   </View>
 
-                  {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
-
-                    <YardPicker />
-
-                  </View>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
-
-                    <YardPicker />
-
-                  </View>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
-
-                    <YardPicker />
-
-                  </View>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
-
-                    <YardPicker />
-
-                  </View>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
-
-                    <YardPicker />
-
-                  </View>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
-
-                    <YardPicker />
-
-                  </View>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
                   </View>
 
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
+
+                    <YardPicker />
+
+                  </View>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
+
+                    <YardPicker />
+
+                  </View>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
+
+                    <YardPicker />
+
+                  </View>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
+
+                    <YardPicker />
+
+                  </View>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
+
+                    <YardPicker />
+                    
+
+                  </View>
+
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
+
+                    <YardPicker />
+
+                  </View>
 
                 </View>
               </ScrollView>
@@ -1531,7 +1543,7 @@ export default class Vessel extends Component {
             </View>
 
 
-
+  
             <View style={{
 
               height: 50, width: '100%', alignItems: 'center',
@@ -1553,7 +1565,7 @@ export default class Vessel extends Component {
 
 
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
+                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
                   <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
                     Subject</Text>
@@ -1576,7 +1588,7 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Deck edges, platforms suitably barricaded.
 
@@ -1590,7 +1602,7 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Deck openings suitably barricaded and grilled to prevent inadvertent fall.
 
@@ -1604,7 +1616,7 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Safety harness and Personal fall arrest blocks effectively used by workers.
 
@@ -1666,17 +1678,17 @@ export default class Vessel extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
                     <YardPicker />
 
                   </View>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
                     <YardPicker />
 
                   </View>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
                     <YardPicker />
 
@@ -1717,7 +1729,7 @@ export default class Vessel extends Component {
 
 
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
+                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
                   <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
                     Subject</Text>
@@ -1740,7 +1752,7 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Gear and equipment for rigging and materials handling
 
@@ -1847,7 +1859,7 @@ export default class Vessel extends Component {
 
 
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
+                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
                   <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
                     Subject</Text>
@@ -1870,7 +1882,7 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Gear and equipment for rigging and materials handling
 
@@ -1936,7 +1948,7 @@ export default class Vessel extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
@@ -1977,7 +1989,7 @@ export default class Vessel extends Component {
 
 
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
+                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
                   <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
                     Subject</Text>
@@ -2001,26 +2013,26 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     FFA including Fire extinguishers, Fire Hoses are adequately rigged in vicinity of work location.</Text>
                 </View>
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     SCBA, First aid kits, and emeregncy evacuation stretcher, tripod are kept ready for use. </Text>
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     "Indications of location of first aid stations, fire control stations are adequately visible.evacuation routes"</Text>
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Audio Visual Emergency alarm is audible in all areas of work. </Text>
                 </View>
@@ -2078,19 +2090,19 @@ export default class Vessel extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
                   </View>
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
                   </View>
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
@@ -2137,7 +2149,7 @@ export default class Vessel extends Component {
 
 
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
+                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
                   <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
                     Subject</Text>
@@ -2147,7 +2159,8 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
 
-                  <Text style={{ fontSize: 16, fontWeight: 'bold' }}>
+                  <Text numberOfLines={3}
+                   style={{ fontSize: 16, fontWeight: 'bold' }}>
                     Fire and explosion prevention, detection and response</Text>
                 </View>
 
@@ -2156,38 +2169,38 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Flammable liquids , solids and gases are stored adequately so that they do not pose a fire hazard. </Text>
                 </View>
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     NO SMOKING signs sufficinetly posted and implemeneted.</Text>
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Precautions for spaces towards No Naked lights , No Hot work efffectively implemented in areas which are not tested and deemed safe. </Text>
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Safe practises imlemented for monitoring areas during breaks to ensure gas connections are adequately shut and FIRE ROUNDS in arae where hot work was in progress. </Text>
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Fire extinguishers in use are sufficinet and adequate for the type of fire.</Text>
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Fire Pumps and Hoses are effectively deployable and in readiness.</Text>
                 </View>
@@ -2245,35 +2258,35 @@ export default class Vessel extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
                   </View>
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
                   </View>
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
                   </View>
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
                   </View>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
                   </View>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
@@ -2309,7 +2322,7 @@ export default class Vessel extends Component {
 
 
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
+                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
                   <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
                     Subject</Text>
@@ -2319,7 +2332,8 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
 
-                  <Text style={{ fontSize: 16, fontWeight: 'bold' }}>
+                  <Text numberOfLines={3}
+                  style={{ fontSize: 16, fontWeight: 'bold' }}>
                     Fire and explosion prevention, detection and response
  </Text>
 
@@ -2330,8 +2344,8 @@ export default class Vessel extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
-                    style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginBottom:35 }}>
+                  <Text numberOfLines={5}
+                    style={{ fontFamily: 'Changa-Medium', fontSize: 16,  }}>
                     PPE matrix duly followed. </Text>
 
 
@@ -2399,7 +2413,7 @@ export default class Vessel extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
                     <YardPicker />
 

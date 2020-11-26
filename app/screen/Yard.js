@@ -117,7 +117,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Medical- First aid kit in location and Hospital facility is prepared with emergency kit.</Text>
 
 
@@ -125,7 +125,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Oil Spill- Oil spill kits in vicinity to deal with spillage of hazadous materials.
 
@@ -139,7 +139,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Probable acts of nature- System of monitoring of weather or information source for natural calamity.
 
 
@@ -298,7 +298,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10 }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10 }}>
                     Items are adequately stored in store rooms.</Text>
 
                 </View>
@@ -308,7 +308,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', marginTop: 38, height: 100 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     There is no Hot Work in vicinity of store rooms</Text>
 
 
@@ -316,7 +316,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', marginTop: 15, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Emergency alarms are duly operational. </Text>
 
@@ -326,7 +326,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', marginTop: 15, height: 100 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Hot work only in designated production area only.
 
                  </Text>
@@ -486,7 +486,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10 }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10 }}>
                     Gas bottles in use are protected against overheating (direct sunlight or nearby hotworks)
 </Text>
 
@@ -497,7 +497,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 45 }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 45 }}>
                     Storage and transportation carried with valve cap attached.
 </Text>
 
@@ -506,7 +506,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 45 }}>
                     Gas cylinders are adequately secured during transportation in upright position</Text>
 
@@ -516,7 +516,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 45 }}>
                     Gas bottles or the cages are marked in a specific colour</Text>
 
@@ -526,7 +526,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 45 }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 45 }}>
                     Arrangement of stoarge room is adequate. </Text>
 
 
@@ -537,7 +537,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 45 }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 45 }}>
                     Connectors, valves, hoses in good condition and are checked prior to use.
 
 
@@ -548,7 +548,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 45 }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 45 }}>
                     Bottles are used from upright position only and not lying down.
 
 
@@ -572,7 +572,7 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
-                      <Text numberOfLines={2}
+                      <Text numberOfLines={5}
                         style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold', }}>
                         Grading</Text>
 
@@ -703,7 +703,7 @@ export default class Yard extends Component {
 
 
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
+                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
                   <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
                     Subject</Text>
@@ -713,7 +713,8 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
 
-                  <Text style={{ fontSize: 16, fontWeight: 'bold' }}>
+                  <Text numberOfLines={3}
+                   style={{ fontSize: 16, fontWeight: 'bold' }}>
                     Gear and equipment for rigging and materials handling</Text>
 
 
@@ -721,7 +722,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10 }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10 }}>
                     Lifting gear in use is in visually good condition</Text>
 
                 </View>
@@ -729,17 +730,17 @@ export default class Yard extends Component {
 
 
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
+                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center',  height: 100 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
                     Plates are stored on imperbeable floor only.</Text>
 
 
                 </View>
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
+                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center',  height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
                     Crane drivers exercise due care while loading-shifting and are guided by signal man.</Text>
 
@@ -747,9 +748,9 @@ export default class Yard extends Component {
 
                 </View>
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
+                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center',  height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
                     Roads are kept clear of plates</Text>
 
@@ -757,9 +758,9 @@ export default class Yard extends Component {
 
                 </View>
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
+                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center',  height: 100 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 30 }}>
                     Random checks to ensure safety features of Cranes are working</Text>
 
 
@@ -794,9 +795,7 @@ export default class Yard extends Component {
                     <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center', width: 100 }}>
 
                       <Text style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                        Photos
-
-  </Text>
+                        Photos</Text>
 
 
 
@@ -805,11 +804,7 @@ export default class Yard extends Component {
                     <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center', width: 100 }}>
 
                       <Text style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                        Nivyash Remarks
-
-
-
-  </Text>
+                        Nivyash Remarks</Text>
 
 
 
@@ -818,10 +813,7 @@ export default class Yard extends Component {
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                       <Text style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                        Yard Actions
-
-
-  </Text>
+                        Yard Actions</Text>
                     </View>
                   </View>
 
@@ -837,7 +829,7 @@ export default class Yard extends Component {
                   {/* LIFT ND SHIFT PICKER */}
 
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, height: 100 }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',    height: 100 }}>
 
                     <YardPicker />
 
@@ -846,7 +838,7 @@ export default class Yard extends Component {
 
                   {/* ihm er picker */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, height: 100 }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',    height: 100 }}>
 
                     <YardPicker />
 
@@ -854,13 +846,13 @@ export default class Yard extends Component {
 
                   {/* loading er picker */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, height: 100 }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',    height: 100 }}>
 
                     <YardPicker />
 
                   </View>
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, height: 100 }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',    height: 100 }}>
 
                     <YardPicker />
 
@@ -902,7 +894,7 @@ export default class Yard extends Component {
 
 
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
+                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
                   <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
                     Subject</Text>
@@ -910,7 +902,7 @@ export default class Yard extends Component {
 
                 </View>
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
+                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
                   <Text style={{ fontSize: 16, fontWeight: 'bold' }}>
                     General </Text>
@@ -920,9 +912,9 @@ export default class Yard extends Component {
 
 
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
+                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center',    height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 35 }}>
                     Housekeeping and illumination in yard.</Text>
 
@@ -945,7 +937,7 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
-                      <Text numberOfLines={2}
+                      <Text numberOfLines={5}
                         style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold', }}>
                         Grading</Text>
 
@@ -1034,7 +1026,7 @@ export default class Yard extends Component {
 
 
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
+                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
                   <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
                     Subject</Text>
@@ -1042,7 +1034,7 @@ export default class Yard extends Component {
 
                 </View>
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
+                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
                   <Text style={{ fontSize: 16, fontWeight: 'bold' }}>
                     General </Text>
@@ -1054,7 +1046,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 48 }}>
                     Health and Sanitaion is adequate. </Text>
 
@@ -1152,7 +1144,7 @@ export default class Yard extends Component {
 
 
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
+                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
                   <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
                     Subject</Text>
@@ -1160,7 +1152,7 @@ export default class Yard extends Component {
 
                 </View>
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
+                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
                   <Text style={{ fontSize: 16, fontWeight: 'bold' }}>
                     General </Text>
@@ -1172,7 +1164,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 52 }}>
                     PPE matrix duly followed.</Text>
 
@@ -1269,7 +1261,7 @@ export default class Yard extends Component {
 
 
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', }}>
+                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', width: 100, alignSelf: 'center', }}>
 
                   <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
                     Subject</Text>
@@ -1302,7 +1294,7 @@ export default class Yard extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={5}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Duly appointed and trained workers are handling hazardous wastes.</Text>
 

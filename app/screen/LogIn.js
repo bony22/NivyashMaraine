@@ -14,6 +14,49 @@ export default class LogIn extends Component {
         super(props);
         this.state = {
 
+
+            hse: '',
+            site: '',
+            yesno:'N/A',
+            rajha: 'N/A',
+            permit: 'N/A',
+            subtool: 'N/A',
+            remark: 'N/A',
+            action: 'N/A',
+
+            yesno1: '',
+            rajha1: '',
+            permit1: '',
+            subtool1: '',
+            remark1: '',
+            action1: '',
+
+
+            yesno2: '',
+            rajha2: '',
+            permit2: '',
+            subtool2: '',
+            remark2: '',
+            action2: '',
+
+            yesno3: '',
+            rajha3: '',
+            permit3: '',
+            subtool3: '',
+            remark3: '',
+            action3: '',
+
+
+            workplan1: {},
+
+
+            picker_value1: [
+                { value: 'N/A' },
+                { value: 'YES' },
+                { value: 'NO' },
+
+            ],
+
             // status: true,
             // status: this.props.navigation.getParam('status', true),
             email: '',
@@ -41,14 +84,83 @@ export default class LogIn extends Component {
             pwd: userpwd,
             user: useremail
         })
-
-        // var user =await Auth.getAccount();
+        await Auth.setWorkPlan();
+        
         console.log('passworddddd', this.state.pwd)
+        
+        console.log('tttt',user)
+        this.workplan()
+        var user= await Auth.getWorkPlan();
         console.log('usernameeeeeeeeee', this.state.user)
         // this.CheckConnectivity()
         // console.log('netstatus', this.state.netstatus)
 
     }
+
+    workplan = async () => {
+
+
+        this.setState({
+          
+     
+         workplan1 : {
+
+            hse: this.state.hse,
+
+            site: this.state.site,
+            hotwork: {
+                yesno: this.state.yesno,
+                rajha: this.state.rajha,
+                permit: this.state.permit,
+                subtool: this.state.subtool,
+                remark: this.state.remark,
+                action: this.state.action,
+
+            },
+            lift: {
+
+                yesno1: this.state.yesno1,
+                rajha1: this.state.rajha1,
+                permit1: this.state.permit1,
+                subtool1: this.state.subtool1,
+                remark1: this.state.remark1,
+                action1: this.state.action1,
+
+            },
+            ihm: {
+
+                yesno2: this.state.yesno2,
+                rajha2: this.state.rajha2,
+                permit2: this.state.permit2,
+                subtool2: this.state.subtool2,
+                remark2: this.state.remark2,
+                action2: this.state.action2,
+            },
+
+            load: {
+
+                yesno3: this.state.yesno3,
+                rajha3: this.state.rajha3,
+                permit3: this.state.permit3,
+                subtool3: this.state.subtool3,
+                remark3: this.state.remark3,
+                action3: this.state.action3,
+            },
+
+        }
+    })
+
+        console.log('object', this.state.workplan1)
+
+          
+
+            await Auth.setWorkPlan(this.state.workplan1);
+            let result= await Auth.getWorkPlan()
+            console.log('objectcgnnnnnnnnnnnnnnnnnnnn',result)
+        
+    }
+
+s
 
 
     change = () => {
@@ -137,24 +249,34 @@ export default class LogIn extends Component {
 
                 console.log(content);
 
+                if(content.data != null){
+
+                    ToastAndroid.show('Login successfully!!!', ToastAndroid.SHORT);
+                    await Auth.setAccount(this.state.userdetails.data);
+                    await Auth.setPassWord(this.state.password);
+                    // AsyncStorage.multiSet([
+                    //     ["email", this.state.userdetails.data],
+                    //     ["password", this.state.password]
+                    // ])
+    
+                    // var pwd = await Auth.getPassWord();
+                    // var user = await Auth.getAccount();
+                    // console.log('password', pwd)
+                    // console.log('username', user)
+                    console.log('userdetail', this.state.userdetails)
+    
+                    this.props.navigation.navigate('NewTab')
+                    // Navigation.navigate(AllTab2)
+
+                }
+
+                else{
+                    ToastAndroid.show('Login failed!!!', ToastAndroid.SHORT);
+                }
 
 
-                ToastAndroid.show('Login successfully!!!', ToastAndroid.SHORT);
-                await Auth.setAccount(this.state.userdetails.data);
-                await Auth.setPassWord(this.state.password);
-                // AsyncStorage.multiSet([
-                //     ["email", this.state.userdetails.data],
-                //     ["password", this.state.password]
-                // ])
 
-                // var pwd = await Auth.getPassWord();
-                // var user = await Auth.getAccount();
-                // console.log('password', pwd)
-                // console.log('username', user)
-                console.log('userdetail', this.state.userdetails)
-
-                this.props.navigation.navigate('AllTabs')
-                // Navigation.navigate(AllTab2)
+               
 
 
             }

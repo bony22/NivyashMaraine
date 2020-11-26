@@ -98,9 +98,9 @@ export default class Enviorment extends Component {
 
 
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 155, }}>
+                <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', height: 155, }}>
 
-                  <Text numberOfLines={4} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10 }}>
+                  <Text numberOfLines={4} style={{ fontFamily: 'Changa-Medium', fontSize: 16,  }}>
                     IHM listed materials are unambigoiusly marked and understood by workers working in vicinity.
                   </Text>
 
@@ -109,7 +109,7 @@ export default class Enviorment extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                  <Text numberOfLines={4} style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Removal , labelling, storage, segregation, transport, treatment and disposal in accordance with procedures laid down in SRFP. </Text>
 
 
@@ -118,7 +118,7 @@ export default class Enviorment extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                  <Text numberOfLines={2}
+                  <Text numberOfLines={4}
                     style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Substances identified as PCHM- Potentially containing hazardous materials are handled in accordnace with laid down procedures. '
                    </Text>
@@ -266,7 +266,7 @@ export default class Enviorment extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 30 }}>
+                  <Text numberOfLines={3} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 30 }}>
                     Removal, handling and remediation adequate.</Text>
 
                 </View>
@@ -397,7 +397,7 @@ export default class Enviorment extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 30 }}>
+                  <Text numberOfLines={3} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop:12 }}>
                     Storage and labelling after removal</Text>
 
                 </View>
@@ -464,7 +464,7 @@ export default class Enviorment extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
@@ -529,7 +529,7 @@ export default class Enviorment extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 30 }}>
+                  <Text numberOfLines={3} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 30 }}>
                     Treatment, transportation and disposal</Text>
 
                 </View>
@@ -596,7 +596,7 @@ export default class Enviorment extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
@@ -663,7 +663,7 @@ export default class Enviorment extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 30 }}>
+                  <Text numberOfLines={4} style={{ fontFamily: 'Changa-Medium', fontSize: 16,  }}>
                     ASBESTOS Management adequate as per SRFP.</Text>
 
                 </View>
@@ -730,7 +730,7 @@ export default class Enviorment extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
@@ -796,7 +796,7 @@ export default class Enviorment extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 30 }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16,}}>
                     PCBS and material containing PCBS adequately removed in accordance with HKC requirements and SRFP procedures. </Text>
 
                 </View>
@@ -863,7 +863,7 @@ export default class Enviorment extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
@@ -927,7 +927,7 @@ export default class Enviorment extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 30 }}>
+                  <Text numberOfLines={4} style={{ fontFamily: 'Changa-Medium', fontSize: 16,}}>
                     Ozone depleting substances  adequately removed in accordance with HKC requirements and SRFP procedures. </Text>
 
                 </View>
@@ -1058,7 +1058,7 @@ export default class Enviorment extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 30 }}>
+                  <Text numberOfLines={5} style={{ fontFamily: 'Changa-Medium', fontSize: 16,  }}>
                     Paints and Coatings  adequately removed in accordance with HKC requirements and SRFP procedures. </Text>
 
                 </View>
@@ -1125,7 +1125,7 @@ export default class Enviorment extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
 
                     <YardPicker />
 
@@ -1185,7 +1185,7 @@ export default class Enviorment extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 30 }}>
+                  <Text numberOfLines={4} style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
                     Prevention of adverse effects to the environment</Text>
 
                 </View>
@@ -1252,7 +1252,7 @@ export default class Enviorment extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
                     <YardPicker />
 
@@ -1313,7 +1313,7 @@ export default class Enviorment extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 30 }}>
+                  <Text numberOfLines={4} style={{ fontFamily: 'Changa-Medium', fontSize: 16,  }}>
                     Spill prevention, control and countermeasures</Text>
 
                 </View>
@@ -1380,7 +1380,7 @@ export default class Enviorment extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center' }}>
 
                     <YardPicker />
 
@@ -1443,7 +1443,7 @@ export default class Enviorment extends Component {
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                  <Text numberOfLines={2} style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginTop: 30 }}>
+                  <Text numberOfLines={3} style={{ fontFamily: 'Changa-Medium', fontSize: 16,}}>
                     Storm-water pollution prevention</Text>
 
                 </View>
@@ -1510,7 +1510,7 @@ export default class Enviorment extends Component {
 
                   {/* picker box gulo for hot work */}
 
-                  <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
                     <YardPicker />
 

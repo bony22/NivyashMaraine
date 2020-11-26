@@ -2,6 +2,7 @@ import HttpClient from '@Utils/HttpClient'
 import Storage from '@Utils/Storage'
 // import { AsyncStorage } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import moment from 'moment';
 
 
 
@@ -42,6 +43,22 @@ async function getTabList() {
 async function setTabList(data) {
     return await Storage.set('tablist', data);
 }
+
+// for work plan
+async function getWorkPlan() {
+    let date= moment().format("DD/MM/YY")
+    return await Storage.get(date);
+}
+
+async function setWorkPlan(data) {
+    let date = moment().format("DD/MM/YY")
+    return await Storage.set(date, data);
+}
+
+
+
+
+
 
 
 
@@ -84,6 +101,9 @@ export default {
     setPassWord,
     getTabList,
     setTabList,
+    
+    getWorkPlan,
+    setWorkPlan,
 
 
 
