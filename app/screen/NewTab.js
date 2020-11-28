@@ -35,7 +35,7 @@ export default class NewTab extends Component {
                             fontSize: 15,
                             color: '#fff',
                             textAlign: 'center'
-                        }}>Tab1</Text>
+                        }}>Work Plan</Text>
 
                     </TouchableOpacity>
 
@@ -57,7 +57,7 @@ export default class NewTab extends Component {
                             fontSize: 15,
                             color: 'white',
                             textAlign: 'center'
-                        }}>Tab2</Text>
+                        }}>Yard</Text>
 
                     </TouchableOpacity>
 
@@ -85,7 +85,7 @@ export default class NewTab extends Component {
                             fontSize: 15,
                             color: '#fff',
                             textAlign: 'center'
-                        }}>Tab3</Text>
+                        }}>Vessel</Text>
 
                     </TouchableOpacity>
 
@@ -107,7 +107,7 @@ export default class NewTab extends Component {
                             fontSize: 15,
                             color: 'white',
                             textAlign: 'center'
-                        }}>Tab4</Text>
+                        }}>Enviornment</Text>
 
                     </TouchableOpacity>
 

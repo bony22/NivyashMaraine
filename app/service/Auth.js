@@ -46,14 +46,49 @@ async function setTabList(data) {
 
 // for work plan
 async function getWorkPlan() {
-    let date= moment().format("DD/MM/YY")
+    let date= moment().format("DD/MM/YY")+'work'
     return await Storage.get(date);
 }
 
 async function setWorkPlan(data) {
-    let date = moment().format("DD/MM/YY")
+    let date = moment().format("DD/MM/YY")+'work'
     return await Storage.set(date, data);
 }
+
+
+// for yard
+async function getYard() {
+    let date1= moment().format("DD/MM/YY")+'yard'
+    return await Storage.get(date1);
+}
+
+async function setYard(data) {
+    let date1= moment().format("DD/MM/YY")+'yard'
+    return await Storage.set(date1, data);
+}
+
+// for vessel
+async function getVessel() {
+    let date2= moment().format("DD/MM/YY")+'vessel'
+    return await Storage.get(date2);
+}
+
+async function setVessel(data) {
+    let date2= moment().format("DD/MM/YY")+'vessel'
+    return await Storage.set(date2, data);
+}
+
+// for environment
+async function getEnvironment() {
+    let date3= moment().format("DD/MM/YY")+'environ'
+    return await Storage.get(date3);
+}
+
+async function setEnvironment(data) {
+    let date3= moment().format("DD/MM/YY")+'environ'
+    return await Storage.set(date3, data);
+}
+
 
 
 
@@ -104,6 +139,12 @@ export default {
     
     getWorkPlan,
     setWorkPlan,
+    getYard,
+    setYard,
+    getVessel,
+    setVessel,
+    getEnvironment,
+    setEnvironment,
 
 
 

@@ -33,7 +33,9 @@ export default class YardPicker extends Component {
                 <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                 <View style={{
-                        height: 35, width: 80, justifyContent: 'center',
+
+
+                        height: 35, width: 90, justifyContent: 'center',
                         //  marginBottom: 13,
                         // marginRight: 15,
                         //  justifyContent: 'flex-start',
@@ -141,8 +143,8 @@ export default class YardPicker extends Component {
                         placeholder='Yard Actions'
                         placeholderTextColor="grey" underlineColorAndroid={'transparent'}
                         multiline={true}
-                        // onChangeText={(value) => this.setState({ email: value })}
-                        // value={this.state.email}
+                        onChangeText={(value) => this.setState({ email: value })}
+                        value={this.state.email}
 
                     />
 

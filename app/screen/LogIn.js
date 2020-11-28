@@ -15,36 +15,36 @@ export default class LogIn extends Component {
         this.state = {
 
 
-            hse: '',
-            site: '',
-            yesno:'N/A',
-            rajha: 'N/A',
-            permit: 'N/A',
-            subtool: 'N/A',
-            remark: 'N/A',
-            action: 'N/A',
+            // hse: '',
+            // site: '',
+            // yesno:'N/A',
+            // rajha: 'N/A',
+            // permit: 'N/A',
+            // subtool: 'N/A',
+            // remark: 'N/A',
+            // action: 'N/A',
 
-            yesno1: '',
-            rajha1: '',
-            permit1: '',
-            subtool1: '',
-            remark1: '',
-            action1: '',
+            // yesno1: '',
+            // rajha1: '',
+            // permit1: '',
+            // subtool1: '',
+            // remark1: '',
+            // action1: '',
 
 
-            yesno2: '',
-            rajha2: '',
-            permit2: '',
-            subtool2: '',
-            remark2: '',
-            action2: '',
+            // yesno2: '',
+            // rajha2: '',
+            // permit2: '',
+            // subtool2: '',
+            // remark2: '',
+            // action2: '',
 
-            yesno3: '',
-            rajha3: '',
-            permit3: '',
-            subtool3: '',
-            remark3: '',
-            action3: '',
+            // yesno3: '',
+            // rajha3: '',
+            // permit3: '',
+            // subtool3: '',
+            // remark3: '',
+            // action3: '',
 
 
             workplan1: {},
@@ -70,7 +70,19 @@ export default class LogIn extends Component {
                 { value: 'TM' },
 
             ],
-            userdetails: {}
+            userdetails: {},
+            yardwork:{
+                status:false
+            },
+            vesselwork:{
+                status:false
+            },
+            environmentwork:{
+                status:false
+            },
+            updatedwork:{
+                status:false
+            }
 
         };
     }
@@ -84,12 +96,15 @@ export default class LogIn extends Component {
             pwd: userpwd,
             user: useremail
         })
-        await Auth.setWorkPlan();
+        await Auth.setWorkPlan(this.state.updatedwork);
+        await Auth.setYard(this.state.yardwork);
+        await Auth.setVessel(this.state.vesselwork);
+        await Auth.setEnvironment(this.state.environmentwork);
         
         console.log('passworddddd', this.state.pwd)
         
         console.log('tttt',user)
-        this.workplan()
+        // this.workplan()
         var user= await Auth.getWorkPlan();
         console.log('usernameeeeeeeeee', this.state.user)
         // this.CheckConnectivity()

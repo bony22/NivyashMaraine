@@ -4,6 +4,7 @@ import { Card, Left, CardItem, Item, Input, Label, Button, Right, Container, Ico
 import moment from 'moment';
 import MyPicker from '../Component/MyPicker';
 import Auth from '../service/Auth';
+import WorkColName from '../Component/WorkColName';
 
 
 const { height, width } = Dimensions.get("window")
@@ -129,6 +130,7 @@ export default class WorkPlan extends Component {
 
 
             picker_value1: [
+                { value: 'Select' },
                 { value: 'N/A' },
                 { value: 'YES' },
                 { value: 'NO' },
@@ -142,7 +144,7 @@ export default class WorkPlan extends Component {
     async componentDidMount() {
 
         var useremail = await Auth.getWorkPlan();
-        let date = moment().format("DD/MM/YY")
+        // let date = moment().format("DD/MM/YY")
         //  var userpwd = await Auth.getPassWord();
         // this.setstate({
         //     allwork:useremail,
@@ -160,8 +162,13 @@ export default class WorkPlan extends Component {
 
 
     }
+    workplan= async () => {
+        setTimeout(() => {
+          this.callWork()
+        }, 500);
+      }
 
-    workplan = async () => {
+    callWork = async () => {
 
 
         this.setState({
@@ -352,6 +359,7 @@ export default class WorkPlan extends Component {
             updatedwork:result
         })
         console.log('objectcgnnnnnnnnnnnnnnnnnnnn', this.state.updatedwork)
+        ToastAndroid.show('data is saved and submitted seccessfully for this day!!!', ToastAndroid.SHORT);
         }
         else{
 
@@ -527,10 +535,14 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ height: 135 }}></View>
 
+                                
+                             
+
+
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10 }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, marginRight: 10 }}>
                                         Hot work
 
                                     </Text>
@@ -543,7 +555,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, }}>
                                         Lifting-shifting
 
 
@@ -556,7 +568,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, }}>
                                         IHM material disposal
 
 
@@ -569,7 +581,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, }}>
                                         Loading-unloading
 
 
@@ -589,88 +601,10 @@ export default class WorkPlan extends Component {
 
                             >
                                 <View style={{ flex: 1 }}>
-                                    <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, height: 100 }}>
+                                    {/* col name */}
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
-
-                                            <Text numberOfLines={2}
-                                                style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold', }}>
-                                                Yes/No/Na
-                                            </Text>
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
-
-                                            <Text numberOfLines={3}
-                                                style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                RA/JHA Prepared- HKC 3.3.3
-
-                                            </Text>
-
-
-
-
-                                        </View>
-
-                                        <View style={{
-                                            justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center',
-                                            width: 100
-                                        }}>
-
-                                            <Text numberOfLines={2}
-                                                style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Permit made
-
-                                            </Text>
-
-
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center', width: 100 }}>
-
-                                            <Text numberOfLines={4} style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Subject covered in tool box briefing
-
-
-                                            </Text>
-
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center', width: 100 }}>
-
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Photos
-
-                                            </Text>
-
-
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center', width: 100 }}>
-
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Remarks
-
-
-                                            </Text>
-
-
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
-
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Yard Actions
-
-
-                                            </Text>
-                                        </View>
-                                    </View>
+                                    <WorkColName />
+                                   
 
                                     {/* picker box gulo for hot work */}
 
@@ -679,7 +613,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -695,7 +629,7 @@ export default class WorkPlan extends Component {
                                                 <Picker
                                                     mode="dropdown"
                                                     placeholder="Type Of users"
-                                                    textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
+                                                    textStyle={{ fontSize: 8,  }}
                                                     iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
                                                     style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
                                                     // selectedValue={this.state.selected}
@@ -738,7 +672,7 @@ export default class WorkPlan extends Component {
 
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -789,7 +723,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -842,7 +776,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -888,24 +822,22 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                        <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
+                                        </TouchableOpacity>
 
-
-
-
-                                        </View>
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -965,7 +897,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -1016,7 +948,7 @@ export default class WorkPlan extends Component {
 
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -1068,7 +1000,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -1121,7 +1053,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -1167,24 +1099,22 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                         <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
+                                        </TouchableOpacity>
 
-
-
-
-                                        </View>
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -1243,7 +1173,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -1294,7 +1224,7 @@ export default class WorkPlan extends Component {
 
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -1346,7 +1276,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -1399,7 +1329,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -1445,24 +1375,21 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                          <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
-
-
-
-
-                                        </View>
+                                        </TouchableOpacity>
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -1520,7 +1447,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -1571,7 +1498,7 @@ export default class WorkPlan extends Component {
 
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -1623,7 +1550,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -1676,7 +1603,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -1722,24 +1649,21 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                        <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
-
-
-
-
-                                        </View>
+                                        </TouchableOpacity>
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -1826,7 +1750,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginRight: 10, marginBottom: 15 }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, marginRight: 10, marginBottom: 15 }}>
                                         Hot work
 
         </Text>
@@ -1839,7 +1763,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, }}>
                                         Critical lifting
 
 
@@ -1853,7 +1777,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, }}>
                                         Work in enclosed space
 
 
@@ -1867,7 +1791,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 10 }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, marginTop: 10 }}>
                                         Work aloft
 
 
@@ -1879,7 +1803,7 @@ export default class WorkPlan extends Component {
                                 </View>
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, marginTop: 15 }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, marginTop: 15 }}>
                                         Oil Removal
 
 
@@ -1893,7 +1817,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, }}>
                                         IHM removal</Text>
 
 
@@ -1906,7 +1830,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, }}>
                                         Electrical work</Text>
 
 
@@ -1920,7 +1844,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, }}>
                                         IHM material disposal</Text>
 
 
@@ -1943,82 +1867,9 @@ export default class WorkPlan extends Component {
 
                             >
                                 <View style={{ flex: 1 }}>
-                                    <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, height: 100 }}>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
-
-                                            <Text numberOfLines={2}
-                                                style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold', }}>
-                                                Yes/No/Na</Text>
-
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
-
-                                            <Text numberOfLines={3}
-                                                style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                RA/JHA Prepared- HKC 3.3.3  </Text>
-                                        </View>
-
-                                        <View style={{
-                                            justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center',
-                                            width: 100
-                                        }}>
-
-                                            <Text numberOfLines={2}
-                                                style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Permit made
-
-                </Text>
-
-
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center', width: 100 }}>
-
-                                            <Text numberOfLines={4} style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Subject covered in tool box briefing
-
-
-                </Text>
-
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center', width: 100 }}>
-
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Photos
-
-                </Text>
-
-
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center', width: 100 }}>
-
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Remarks
-
-
-                </Text>
-
-
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
-
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Yard Actions
-
-
-                </Text>
-                                        </View>
-                                    </View>
+                                    <WorkColName/>
+                                  
 
                                     {/* picker box gulo for hot work */}
 
@@ -2027,7 +1878,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -2078,7 +1929,7 @@ export default class WorkPlan extends Component {
 
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -2130,7 +1981,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -2183,7 +2034,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -2229,24 +2080,22 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                        <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
+                                        </TouchableOpacity>
 
-
-
-
-                                        </View>
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -2306,7 +2155,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -2357,7 +2206,7 @@ export default class WorkPlan extends Component {
 
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -2409,7 +2258,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -2462,7 +2311,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -2508,24 +2357,21 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                       <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
-
-
-
-
-                                        </View>
+                                        </TouchableOpacity>
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -2584,7 +2430,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -2687,7 +2533,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -2740,7 +2586,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -2786,24 +2632,21 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                        <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
-
-
-
-
-                                        </View>
+                                        </TouchableOpacity>
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -2861,7 +2704,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -2912,7 +2755,7 @@ export default class WorkPlan extends Component {
 
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -2964,7 +2807,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3017,7 +2860,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3063,24 +2906,22 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                        <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
+                                        </TouchableOpacity>
 
-
-
-
-                                        </View>
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -3141,7 +2982,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3192,7 +3033,7 @@ export default class WorkPlan extends Component {
 
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3244,7 +3085,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3297,7 +3138,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3343,24 +3184,22 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                         <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
+                                        </TouchableOpacity>
 
-
-
-
-                                        </View>
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -3419,7 +3258,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3470,7 +3309,7 @@ export default class WorkPlan extends Component {
 
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3522,7 +3361,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3575,7 +3414,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3621,24 +3460,23 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                         <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
+                                        </TouchableOpacity>
 
 
-
-
-                                        </View>
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -3697,7 +3535,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3748,7 +3586,7 @@ export default class WorkPlan extends Component {
 
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3800,7 +3638,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3853,7 +3691,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3899,24 +3737,22 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                          <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
+                                        </TouchableOpacity>
 
-
-
-
-                                        </View>
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -3975,7 +3811,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -4026,7 +3862,7 @@ export default class WorkPlan extends Component {
 
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -4078,7 +3914,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -4131,7 +3967,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -4177,24 +4013,22 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                          <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
+                                        </TouchableOpacity>
 
-
-
-
-                                        </View>
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -4278,7 +4112,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 100, alignSelf: 'center', height: 102 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, }}>
                                         Blocks falling
                                     </Text>
 
@@ -4290,7 +4124,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, }}>
                                         Plate Cutting
 
 
@@ -4304,7 +4138,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 80, alignSelf: 'center', margin: 10, height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 16, }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, }}>
                                         Crane Lifting-Shifting
 
 
@@ -4323,88 +4157,9 @@ export default class WorkPlan extends Component {
 
                             >
                                 <View style={{ flex: 1 }}>
-                                    <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10, height: 100 }}>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
-
-                                            <Text numberOfLines={2}
-                                                style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold', }}>
-                                                Yes/No/Na
-                                            </Text>
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
-
-                                            <Text numberOfLines={3}
-                                                style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                RA/JHA Prepared- HKC 3.3.3
-
-                                            </Text>
-
-
-
-
-                                        </View>
-
-                                        <View style={{
-                                            justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center',
-                                            width: 100
-                                        }}>
-
-                                            <Text numberOfLines={2}
-                                                style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Permit made
-
-                                            </Text>
-
-
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center', width: 100 }}>
-
-                                            <Text numberOfLines={4} style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Subject covered in tool box briefing
-
-
-                                            </Text>
-
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center', width: 100 }}>
-
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Photos
-
-                                            </Text>
-
-
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, alignSelf: 'center', width: 100 }}>
-
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Remarks
-
-
-                                            </Text>
-
-
-
-                                        </View>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
-
-                                            <Text style={{ fontFamily: 'Changa-Medium', fontSize: 15, fontWeight: 'bold' }}>
-                                                Yard Actions
-
-
-                                            </Text>
-                                        </View>
-                                    </View>
+                                    <WorkColName/>
+                                   
 
                                     {/* picker box gulo for hot work */}
 
@@ -4413,7 +4168,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -4464,7 +4219,7 @@ export default class WorkPlan extends Component {
 
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -4516,7 +4271,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -4569,7 +4324,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -4615,24 +4370,21 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                         <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
-
-
-
-
-                                        </View>
+                                        </TouchableOpacity>
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -4692,7 +4444,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -4743,7 +4495,7 @@ export default class WorkPlan extends Component {
 
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -4795,7 +4547,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -4848,7 +4600,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -4894,24 +4646,22 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                        <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
+                                        </TouchableOpacity>
 
-
-
-
-                                        </View>
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -4970,7 +4720,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, height: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -5021,7 +4771,7 @@ export default class WorkPlan extends Component {
 
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -5073,7 +4823,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -5126,7 +4876,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
                                             <View style={{
-                                                height: 35, width: 80, justifyContent: 'center',
+                                                height: 35, width: 90, justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -5172,24 +4922,23 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+                                        <TouchableOpacity 
+                                        style={{ justifyContent: 'center', alignItems: 'center',  width: 100,marginLeft:20 }}>
 
-                                            <View style={{ height: 50, width: '100%', flexDirection: 'row', }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', }}>
 
-                                                <View style={{ width: '70%', marginLeft: 10 }}>
-                                                    <Button
-                                                        //onPress={() => this.imageHandler()}
-                                                        style={styles.chooseButton}
-                                                    >
-                                                        <Text style={{ color: '#000' }}>Choose File</Text>
-                                                    </Button>
+                                                <View style={{ width: '70%', }}>
+                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
+                                                        {/* //onPress={() => this.imageHandler()}
+                                                        style={styles.chooseButton} */}
+                                                    
+                                                        {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
+                                                    </ImageBackground>
                                                 </View>
                                             </View>
+                                        </TouchableOpacity>
 
-
-
-
-                                        </View>
+                                        
 
                                         <View style={{ justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: 100 }}>
 
@@ -5424,6 +5173,18 @@ const styles = StyleSheet.create({
         // marginTop: 15,
 
         // marginVertical:5
+    },
+
+    selectphoto: {
+        flex: 1,
+        // height: undefined,
+        // width: undefined
+        width: 80,
+        height: 50,
+        // borderRadius: 100,
+        //overflow: "hidden",
+       // marginTop: 15,
+
     },
 
 })
