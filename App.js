@@ -19,7 +19,7 @@ import WorkPlan from './app/screen/WorkPlan';
 import Vessel from './app/screen/Vessel';
 import Yard from './app/screen/Yard';
 import Enviorment from './app/screen/Enviorment';
-
+import Work from './app/screen/Work';
 
 
 // const ScreenStack = createStackNavigator(

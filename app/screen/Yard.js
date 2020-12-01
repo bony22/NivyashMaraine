@@ -4531,7 +4531,7 @@ export default class Yard extends Component {
  {this.state.yardwork.status == false ?
 
 
-          <View style={{ height: 50, width: width, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center', flexDirection: 'row', }}>
+          <View style={{ height: 50, width: '100%', backgroundColor: 'white', justifyContent: 'center', alignItems: 'center', flexDirection: 'row', }}>
             <Pressable
                onPress={() => this.yardSubmit()}
 

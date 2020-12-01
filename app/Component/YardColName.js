@@ -12,7 +12,7 @@ export default class YardColName extends Component {
     return (
       <View>
         
-        <View style={{ flexDirection: 'row', alignItems: 'center', height: 100,justifyContent:'center',borderWidth:1,borderRadius:15}}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', height: 80,justifyContent:'center',borderWidth:1,}}>
 
 <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, }}>
 
