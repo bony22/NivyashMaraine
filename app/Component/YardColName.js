@@ -14,10 +14,10 @@ export default class YardColName extends Component {
         
         <View style={{ flexDirection: 'row', alignItems: 'center', height: 80,justifyContent:'center',borderWidth:1,}}>
 
-<View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100, }}>
+<View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120, }}>
 
   <Text numberOfLines={2}
-    style={{ fontFamily: 'Changa-Medium', fontSize: 13, fontWeight: 'bold', }}>
+    style={{ fontFamily: 'Changa-Medium', fontSize: 13, fontWeight: 'bold',padding:5 }}>
     Grading
   </Text>
 
@@ -27,9 +27,9 @@ export default class YardColName extends Component {
 
 
 
-<View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+<View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-  <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, fontWeight: 'bold' }}>
+  <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, fontWeight: 'bold' ,padding:5}}>
     Photos
   </Text>
 
@@ -37,9 +37,9 @@ export default class YardColName extends Component {
 
 </View>
 
-<View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+<View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-  <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, fontWeight: 'bold', marginLeft: 20 }}>
+  <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, fontWeight: 'bold', marginLeft: 20,padding:5 }}>
     Nivyash Remarks
 
 
@@ -50,9 +50,9 @@ export default class YardColName extends Component {
 
 </View>
 
-<View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 100 }}>
+<View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-  <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, fontWeight: 'bold' }}>
+  <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, fontWeight: 'bold',padding:5 }}>
     Yard Actions
   </Text>
 

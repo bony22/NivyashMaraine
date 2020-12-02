@@ -6,6 +6,7 @@ import MyPicker from '../Component/MyPicker';
 import Auth from '../service/Auth';
 import WorkColName from '../Component/WorkColName';
 // import ImagePicker from 'react-native-image-picker';
+import ImagePicker from 'react-native-image-picker';
 
 
 const { height, width } = Dimensions.get("window")
@@ -186,6 +187,8 @@ export default class WorkPlan extends Component {
         }, 500);
     }
 
+
+
     callWork = async () => {
 
 
@@ -208,6 +211,7 @@ export default class WorkPlan extends Component {
                         subtool: this.state.subtool,
                         remark: this.state.remark,
                         action: this.state.action,
+                        resourcePath: this.state.resourcePath
 
                     },
                     lift: {
@@ -218,6 +222,7 @@ export default class WorkPlan extends Component {
                         subtool1: this.state.subtool1,
                         remark1: this.state.remark1,
                         action1: this.state.action1,
+                        resourcePath1: this.state.resourcePath1
 
                     },
                     ihm: {
@@ -228,6 +233,7 @@ export default class WorkPlan extends Component {
                         subtool2: this.state.subtool2,
                         remark2: this.state.remark2,
                         action2: this.state.action2,
+                        resourcePath2: this.state.resourcePath2
                     },
 
                     load: {
@@ -238,6 +244,7 @@ export default class WorkPlan extends Component {
                         subtool3: this.state.subtool3,
                         remark3: this.state.remark3,
                         action3: this.state.action3,
+                        resourcePath3: this.state.resourcePath3
                     }
                 },
 
@@ -253,6 +260,7 @@ export default class WorkPlan extends Component {
                         subtool11: this.state.subtool11,
                         remark11: this.state.remark11,
                         action11: this.state.action11,
+                        resourcePath11: this.state.resourcePath11
 
                     },
                     critical: {
@@ -263,6 +271,7 @@ export default class WorkPlan extends Component {
                         subtool12: this.state.subtool12,
                         remark12: this.state.remark12,
                         action12: this.state.action12,
+                        resourcePath12: this.state.resourcePath12
 
                     },
                     workenclose: {
@@ -273,6 +282,7 @@ export default class WorkPlan extends Component {
                         subtool21: this.state.subtool21,
                         remark21: this.state.remark21,
                         action21: this.state.action21,
+                        resourcePath21: this.state.resourcePath21
                     },
 
                     aloft: {
@@ -283,6 +293,7 @@ export default class WorkPlan extends Component {
                         subtool31: this.state.subtool31,
                         remark31: this.state.remark31,
                         action31: this.state.action31,
+                        resourcePath31: this.state.resourcePath31
                     },
 
 
@@ -294,6 +305,7 @@ export default class WorkPlan extends Component {
                         subtool41: this.state.subtool41,
                         remark41: this.state.remark41,
                         action41: this.state.action41,
+                        resourcePath41: this.state.resourcePath41
                     },
                     ihmremove: {
 
@@ -303,6 +315,7 @@ export default class WorkPlan extends Component {
                         subtool51: this.state.subtool51,
                         remark51: this.state.remark51,
                         action51: this.state.action51,
+                        resourcePath51: this.state.resourcePath51
                     },
 
                     elecwork: {
@@ -313,6 +326,7 @@ export default class WorkPlan extends Component {
                         subtool61: this.state.subtool61,
                         remark61: this.state.remark61,
                         action61: this.state.action61,
+                        resourcePath61: this.state.resourcePath61
                     },
                     ihmmat: {
 
@@ -322,6 +336,7 @@ export default class WorkPlan extends Component {
                         subtool71: this.state.subtool71,
                         remark71: this.state.remark71,
                         action71: this.state.action71,
+                        resourcePath71: this.state.resourcePath71
                     },
 
 
@@ -337,6 +352,7 @@ export default class WorkPlan extends Component {
                         subtool81: this.state.subtool81,
                         remark81: this.state.remark81,
                         action81: this.state.action81,
+                        resourcePath81: this.state.resourcePath81
                     },
 
                     platecut: {
@@ -347,6 +363,7 @@ export default class WorkPlan extends Component {
                         subtool91: this.state.subtool91,
                         remark91: this.state.remark91,
                         action91: this.state.action91,
+                        resourcePath91: this.state.resourcePath91
                     },
                     crane: {
 
@@ -356,6 +373,7 @@ export default class WorkPlan extends Component {
                         subtool101: this.state.subtool101,
                         remark101: this.state.remark101,
                         action101: this.state.action101,
+                        resourcePath101: this.state.resourcePath101
                     },
 
                 }
@@ -365,7 +383,7 @@ export default class WorkPlan extends Component {
         })
 
         console.log('object', this.state.workplan1)
-        if (this.state.status != true) {
+        // if (this.state.status != true) {
 
 
 
@@ -378,14 +396,13 @@ export default class WorkPlan extends Component {
             })
             console.log('objectcgnnnnnnnnnnnnnnnnnnnn', this.state.updatedwork)
             ToastAndroid.show('data is saved and submitted seccessfully for this day!!!', ToastAndroid.SHORT);
-        }
-        else {
+        // }
+        // else {
 
-            ToastAndroid.show('data is already inserted for this day!!!', ToastAndroid.SHORT);
-        }
+        //     ToastAndroid.show('data is already inserted for this day!!!', ToastAndroid.SHORT);
+        // }
 
     }
-
 
     selectFile = async () => {
         var options = {
@@ -422,6 +439,8 @@ export default class WorkPlan extends Component {
         });
     };
 
+
+
     selectFile1 = async () => {
         var options = {
             title: 'Select Image',
@@ -456,6 +475,7 @@ export default class WorkPlan extends Component {
             }
         });
     };
+
 
     selectFile2 = async () => {
         var options = {
@@ -492,6 +512,8 @@ export default class WorkPlan extends Component {
         });
     };
 
+
+
     selectFile3 = async () => {
         var options = {
             title: 'Select Image',
@@ -526,6 +548,8 @@ export default class WorkPlan extends Component {
             }
         });
     };
+
+
     selectFile11 = async () => {
         var options = {
             title: 'Select Image',
@@ -556,7 +580,7 @@ export default class WorkPlan extends Component {
                 this.setState({
                     resourcePath11: source,
                 });
-                console.log("imageeeeee", this.state.resourcePath1)
+                console.log("imageeeeee", this.state.resourcePath11)
             }
         });
     };
@@ -597,6 +621,8 @@ export default class WorkPlan extends Component {
         });
     };
 
+
+
     selectFile21 = async () => {
         var options = {
             title: 'Select Image',
@@ -631,6 +657,8 @@ export default class WorkPlan extends Component {
             }
         });
     };
+
+
 
     selectFile31 = async () => {
         var options = {
@@ -667,40 +695,7 @@ export default class WorkPlan extends Component {
         });
     };
 
-    selectFile41 = async () => {
-        var options = {
-            title: 'Select Image',
-            //   customButtons: [
-            //     { 
-            //       name: 'customOptionKey', 
-            //       title: 'Choose file from Custom Option' 
-            //     },
-            //   ],
-            storageOptions: {
-                skipBackup: true,
-                path: 'images',
-            },
-        };
 
-        ImagePicker.showImagePicker(options, res => {
-            console.log('Response = ', res);
-
-            if (res.didCancel) {
-                console.log('User cancelled image picker');
-            } else if (res.error) {
-                console.log('ImagePicker Error: ', res.error);
-            } else if (res.customButton) {
-                console.log('User tapped custom button: ', res.customButton);
-                alert(res.customButton);
-            } else {
-                let source = res;
-                this.setState({
-                    resourcePath41: source,
-                });
-                console.log("imageeeeee", this.state.resourcePath41)
-            }
-        });
-    };
 
     selectFile41 = async () => {
         var options = {
@@ -736,6 +731,45 @@ export default class WorkPlan extends Component {
             }
         });
     };
+
+
+
+    selectFile51 = async () => {
+        var options = {
+            title: 'Select Image',
+            //   customButtons: [
+            //     { 
+            //       name: 'customOptionKey', 
+            //       title: 'Choose file from Custom Option' 
+            //     },
+            //   ],
+            storageOptions: {
+                skipBackup: true,
+                path: 'images',
+            },
+        };
+
+        ImagePicker.showImagePicker(options, res => {
+            console.log('Response = ', res);
+
+            if (res.didCancel) {
+                console.log('User cancelled image picker');
+            } else if (res.error) {
+                console.log('ImagePicker Error: ', res.error);
+            } else if (res.customButton) {
+                console.log('User tapped custom button: ', res.customButton);
+                alert(res.customButton);
+            } else {
+                let source = res;
+                this.setState({
+                    resourcePath51: source,
+                });
+                console.log("imageeeeee", this.state.resourcePath51)
+            }
+        });
+    };
+
+
 
     selectFile61 = async () => {
         var options = {
@@ -772,6 +806,8 @@ export default class WorkPlan extends Component {
         });
     };
 
+
+
     selectFile71 = async () => {
         var options = {
             title: 'Select Image',
@@ -807,6 +843,8 @@ export default class WorkPlan extends Component {
         });
     };
 
+
+
     selectFile81 = async () => {
         var options = {
             title: 'Select Image',
@@ -841,6 +879,8 @@ export default class WorkPlan extends Component {
             }
         });
     };
+
+
     selectFile91 = async () => {
         var options = {
             title: 'Select Image',
@@ -877,6 +917,44 @@ export default class WorkPlan extends Component {
     };
 
 
+    selectFile101 = async () => {
+        var options = {
+            title: 'Select Image',
+            //   customButtons: [
+            //     { 
+            //       name: 'customOptionKey', 
+            //       title: 'Choose file from Custom Option' 
+            //     },
+            //   ],
+            storageOptions: {
+                skipBackup: true,
+                path: 'images',
+            },
+        };
+
+        ImagePicker.showImagePicker(options, res => {
+            console.log('Response = ', res);
+
+            if (res.didCancel) {
+                console.log('User cancelled image picker');
+            } else if (res.error) {
+                console.log('ImagePicker Error: ', res.error);
+            } else if (res.customButton) {
+                console.log('User tapped custom button: ', res.customButton);
+                alert(res.customButton);
+            } else {
+                let source = res;
+                this.setState({
+                    resourcePath101: source,
+                });
+                console.log("imageeeeee", this.state.resourcePath101)
+            }
+        });
+    };
+
+
+
+
     render() {
         return (
             <View style={{ flex: 1 }}>
@@ -908,11 +986,11 @@ export default class WorkPlan extends Component {
                             {/* <View style={{ flexDirection: "row", justifyContent: 'flex-start', marginTop: 10 }}> */}
 
                             <Text style={{
-                                fontFamily: 'Changa-Medium', fontSize: 14,padding:5,
+                                fontFamily: 'Changa-Medium', fontSize: 14, padding: 5,
                                 // marginLeft: 3
                             }}>Date : </Text>
                             <Text style={{
-                                fontFamily: 'Changa-Medium', fontSize: 14,padding:5,
+                                fontFamily: 'Changa-Medium', fontSize: 14, padding: 5,
                                 // marginLeft: 30 
                             }}>{moment().format("MMM Do YY")}</Text>
 
@@ -934,7 +1012,7 @@ export default class WorkPlan extends Component {
                             <Text style={{
                                 fontFamily: 'Poppins-Medium',
                                 fontSize: 13,
-                                color: 'black',padding:5,
+                                color: 'black', padding: 5,
                                 //  marginLeft: 10
                             }}
                             >
@@ -974,7 +1052,7 @@ export default class WorkPlan extends Component {
                             <Text style={{
                                 fontFamily: 'Poppins-Medium',
                                 fontSize: 13,
-                                color: 'black',padding:5
+                                color: 'black', padding: 5
                                 //  marginLeft: 10
                             }}
                             >
@@ -1471,29 +1549,7 @@ export default class WorkPlan extends Component {
 
                                     {/* LIFT ND SHIFT PICKER */}
 
-                                    {/* <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
-                                          width: 120,
-                                        //  height: 60
-                                    }}>
-
-                                            <View style={{
-                                                height: 35,
-                                                 width: '100%',
-                                                  justifyContent: 'center',
-                                                //  marginBottom: 13,
-                                                // marginRight: 15,
-                                                //  justifyContent: 'flex-start',
-                                                alignItems: 'center',
-                                                // backgroundColor: '#1273DE',
-                                                // marginLeft: 20,
-                                             borderWidth: 1,
-                                                borderColor: 'grey',
-
-
-
-                                            }}></View> */}
 
 
                                     <View style={{ flexDirection: 'row', alignItems: 'center', }}>
@@ -1710,6 +1766,7 @@ export default class WorkPlan extends Component {
                                         </View>
 
                                         <TouchableOpacity
+                                            onPress={() => this.selectFile1()}
                                             style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10, alignSelf: 'center' }}>
 
                                             <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent: 'center' }}>
@@ -1718,6 +1775,9 @@ export default class WorkPlan extends Component {
                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
                                                         {/* //onPress={() => this.imageHandler()}
                                                         style={styles.chooseButton} */}
+
+                                                        <Image source={{ uri: this.state.resourcePath1.uri }}
+                                                            style={[styles.selectphoto]} resizeMode="cover" />
 
                                                         {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
                                                     </ImageBackground>
@@ -2006,6 +2066,7 @@ export default class WorkPlan extends Component {
                                         </View>
 
                                         <TouchableOpacity
+                                       onPress={() => this.selectFile2()}
                                             style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10, alignSelf: 'center' }}>
 
                                             <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent: 'center' }}>
@@ -2014,6 +2075,8 @@ export default class WorkPlan extends Component {
                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
                                                         {/* //onPress={() => this.imageHandler()}
                                                         style={styles.chooseButton} */}
+                                                        <Image source={{ uri: this.state.resourcePath2.uri }}
+                                                        style={[styles.selectphoto]} resizeMode="cover" />
 
                                                         {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
                                                     </ImageBackground>
@@ -2076,29 +2139,7 @@ export default class WorkPlan extends Component {
 
                                     {/* loading er picker */}
 
-                                    {/* <View style={{ flexDirection: 'row', alignItems: 'center', }}>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
-                                          width: 120,
-                                        //  height: 60
-                                    }}>
-
-                                            <View style={{
-                                                height: 35,
-                                                 width: '100%',
-                                                  justifyContent: 'center',
-                                                //  marginBottom: 13,
-                                                // marginRight: 15,
-                                                //  justifyContent: 'flex-start',
-                                                alignItems: 'center',
-                                                // backgroundColor: '#1273DE',
-                                                // marginLeft: 20,
-                                             borderWidth: 1,
-                                                borderColor: 'grey',
-
-
-
-                                            }}></View> */}
+                                    
 
                                     <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
@@ -2312,6 +2353,8 @@ export default class WorkPlan extends Component {
                                         </View>
 
                                         <TouchableOpacity
+                                        onPress={() => this.selectFile3()}
+
                                             style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10, alignSelf: 'center' }}>
 
                                             <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent: 'center' }}>
@@ -2320,6 +2363,8 @@ export default class WorkPlan extends Component {
                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
                                                         {/* //onPress={() => this.imageHandler()}
                                                         style={styles.chooseButton} */}
+                                                         <Image source={{ uri: this.state.resourcePath3.uri }}
+                                                         style={[styles.selectphoto]} resizeMode="cover" />
 
                                                         {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
                                                     </ImageBackground>
@@ -2401,10 +2446,10 @@ export default class WorkPlan extends Component {
 
                         </View>
 
-                        
 
 
-                        <View style={{width: '100%', alignItems: 'flex-start', flexDirection: 'row', }}>
+
+                        <View style={{ width: '100%', alignItems: 'flex-start', flexDirection: 'row', }}>
 
 
 
@@ -2417,9 +2462,9 @@ export default class WorkPlan extends Component {
                                     alignSelf: 'center',
                                     height: 65 */}
 
-                                <View style={{ justifyContent: 'center', alignItems: 'center', width: 65, alignSelf: 'center', height: 65}}>
+                                <View style={{ justifyContent: 'center', alignItems: 'center', width: 65, alignSelf: 'center', height: 65 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, marginBottom:40,padding:5}}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, marginBottom: 40, padding: 5 }}>
                                         Hot work
                                     </Text>
 
@@ -2431,7 +2476,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 65, alignSelf: 'center', height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13,padding:5 }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, padding: 5 }}>
                                         Critical lifting
                                     </Text>
 
@@ -2440,7 +2485,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 65, alignSelf: 'center', height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13,padding:5 }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, padding: 5 }}>
                                         Work in enclosed space
                                     </Text>
 
@@ -2449,7 +2494,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 65, alignSelf: 'center', height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13,  }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, }}>
                                         Work aloft
                                     </Text>
 
@@ -2457,7 +2502,7 @@ export default class WorkPlan extends Component {
                                 </View>
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 65, alignSelf: 'center', height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, padding:5}}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, padding: 5 }}>
                                         Oil Removal
                                     </Text>
 
@@ -2466,7 +2511,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 65, alignSelf: 'center', height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, padding:5}}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, padding: 5 }}>
                                         IHM removal
                                     </Text>
 
@@ -2475,7 +2520,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 65, alignSelf: 'center', height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, padding:5}}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, padding: 5 }}>
                                         Electrical work
                                     </Text>
 
@@ -2484,7 +2529,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 65, alignSelf: 'center', height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13,padding:5 }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, padding: 5 }}>
                                         IHM material disposal
                                     </Text>
 
@@ -2507,14 +2552,15 @@ export default class WorkPlan extends Component {
 
 
                                     {/* picker box gulo for hot work */}
-                                   
 
-                                    <View style={{  flexDirection: 'row', alignItems: 'center', }}>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
-                                        width: 120,
-                                        //  height: 60
-                                    }}>
+                                    <View style={{ flexDirection: 'row', alignItems: 'center', }}>
+
+                                        <View style={{
+                                            justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
+                                            width: 120,
+                                            //  height: 60
+                                        }}>
 
                                             <View style={{
                                                 height: 35, width: '100%', justifyContent: 'center',
@@ -2564,10 +2610,11 @@ export default class WorkPlan extends Component {
 
 
 
-                                        <View style={{justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
-                                        width: 120,
-                                        //  height: 60
-                                     }}>
+                                        <View style={{
+                                            justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
+                                            width: 120,
+                                            //  height: 60
+                                        }}>
 
 
                                             <View style={{
@@ -2620,10 +2667,11 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
-                                        width: 120,
-                                        //  height: 60
-                                     }}>
+                                        <View style={{
+                                            justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
+                                            width: 120,
+                                            //  height: 60
+                                        }}>
 
                                             <View style={{
                                                 height: 35, width: '100%', justifyContent: 'center',
@@ -2676,13 +2724,14 @@ export default class WorkPlan extends Component {
 
                                         </View>
 
-                                        <View style={{justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
-                                        width: 120,
-                                        //  height: 60
-                                    }}>
+                                        <View style={{
+                                            justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
+                                            width: 120,
+                                            //  height: 60
+                                        }}>
 
                                             <View style={{
-                                                height: 35, width:'100%', justifyContent: 'center',
+                                                height: 35, width: '100%', justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -2729,14 +2778,18 @@ export default class WorkPlan extends Component {
                                         </View>
 
                                         <TouchableOpacity
-                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10,alignSelf:'center' }}>
+                                        onPress={() => this.selectFile11()}
 
-                                            <View style={{ height: 80, width: '100%', flexDirection: 'row',justifyContent:'center' }}>
+                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10, alignSelf: 'center' }}>
+
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent: 'center' }}>
 
                                                 <View style={{ width: '70%', }}>
                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
                                                         {/* //onPress={() => this.imageHandler()}
                                                         style={styles.chooseButton} */}
+                                                                 <Image source={{ uri: this.state.resourcePath11.uri }}
+                                                                    style={[styles.selectphoto]} resizeMode="cover" />
 
                                                         {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
                                                     </ImageBackground>
@@ -2801,32 +2854,8 @@ export default class WorkPlan extends Component {
 
                                     {/* LIFT ND Critical lifting */}
 
-                                     {/* <View style={{ flexDirection: 'row', alignItems: 'center', }}>
-
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
-                                          width: 120,
-                                        //  height: 60
-                                    }}>
-
-                                            <View style={{
-                                                height: 35,
-                                                 width: '100%',
-                                                  justifyContent: 'center',
-                                                //  marginBottom: 13,
-                                                // marginRight: 15,
-                                                //  justifyContent: 'flex-start',
-                                                alignItems: 'center',
-                                                // backgroundColor: '#1273DE',
-                                                // marginLeft: 20,
-                                             borderWidth: 1,
-                                                borderColor: 'grey',
-
-
-
-                                            }}></View> */}
-
-
-                                    <View style={{flexDirection: 'row', alignItems: 'center', }}>
+                                   
+                                    <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120, }}>
 
@@ -3034,14 +3063,18 @@ export default class WorkPlan extends Component {
                                         </View>
 
                                         <TouchableOpacity
-                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10 ,alignSelf:'center'}}>
+                                        onPress={() => this.selectFile12()}
 
-                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent:'center'}}>
+                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10, alignSelf: 'center' }}>
+
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent: 'center' }}>
 
                                                 <View style={{ width: '70%', }}>
                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
                                                         {/* //onPress={() => this.imageHandler()}
                                                         style={styles.chooseButton} */}
+                                                         <Image source={{ uri: this.state.resourcePath12.uri }}
+                                                            style={[styles.selectphoto]} resizeMode="cover" />
 
                                                         {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
                                                     </ImageBackground>
@@ -3110,7 +3143,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
                                             <View style={{
-                                                height: 35, width:'100%', justifyContent: 'center',
+                                                height: 35, width: '100%', justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -3313,14 +3346,18 @@ export default class WorkPlan extends Component {
                                         </View>
 
                                         <TouchableOpacity
-                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10 ,alignSelf:'center'}}>
+                                        onPress={() => this.selectFile21()}
 
-                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent:'center'}}>
+                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10, alignSelf: 'center' }}>
+
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent: 'center' }}>
 
                                                 <View style={{ width: '70%', }}>
                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
                                                         {/* //onPress={() => this.imageHandler()}
                                                         style={styles.chooseButton} */}
+                                                         <Image source={{ uri: this.state.resourcePath21.uri }}
+                                                        style={[styles.selectphoto]} resizeMode="cover" />
 
                                                         {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
                                                     </ImageBackground>
@@ -3385,7 +3422,7 @@ export default class WorkPlan extends Component {
 
                                     <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120}}>
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
                                             <View style={{
                                                 height: 35, width: '100%', justifyContent: 'center',
@@ -3591,14 +3628,18 @@ export default class WorkPlan extends Component {
                                         </View>
 
                                         <TouchableOpacity
-                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10,alignSelf:'center' }}>
+                                        onPress={() => this.selectFile31()}
 
-                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent:'center'}}>
+                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10, alignSelf: 'center' }}>
+
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent: 'center' }}>
 
                                                 <View style={{ width: '70%', }}>
                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
                                                         {/* //onPress={() => this.imageHandler()}
                                                         style={styles.chooseButton} */}
+                                                         <Image source={{ uri: this.state.resourcePath31.uri }}
+                                                                style={[styles.selectphoto]} resizeMode="cover" />
 
                                                         {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
                                                     </ImageBackground>
@@ -3668,7 +3709,7 @@ export default class WorkPlan extends Component {
 
 
 
-                                    <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
+                                    <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
@@ -3876,14 +3917,18 @@ export default class WorkPlan extends Component {
                                         </View>
 
                                         <TouchableOpacity
-                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10 ,alignSelf:'center'}}>
+                                        onPress={() => this.selectFile41()}
 
-                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent:'center'}}>
+                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10, alignSelf: 'center' }}>
+
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent: 'center' }}>
 
                                                 <View style={{ width: '70%', }}>
                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
                                                         {/* //onPress={() => this.imageHandler()}
                                                         style={styles.chooseButton} */}
+                                                        <Image source={{ uri: this.state.resourcePath41.uri }}
+                                                            style={[styles.selectphoto]} resizeMode="cover" />
 
                                                         {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
                                                     </ImageBackground>
@@ -3948,7 +3993,7 @@ export default class WorkPlan extends Component {
 
                                     {/* IHM removal er picker */}
 
-                                    <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
+                                    <View style={{ flexDirection: 'row', alignItems: 'center', }}>
 
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
@@ -4056,7 +4101,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
                                             <View style={{
-                                                height: 35, width:'100%', justifyContent: 'center',
+                                                height: 35, width: '100%', justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -4156,14 +4201,18 @@ export default class WorkPlan extends Component {
                                         </View>
 
                                         <TouchableOpacity
-                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10,alignSelf:'center' }}>
+                                        onPress={() => this.selectFile51()}
 
-                                            <View style={{ height: 80, width: '100%', flexDirection: 'row',justifyContent:'center' }}>
+                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10, alignSelf: 'center' }}>
+
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent: 'center' }}>
 
                                                 <View style={{ width: '70%', }}>
                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
                                                         {/* //onPress={() => this.imageHandler()}
                                                         style={styles.chooseButton} */}
+                                                        <Image source={{ uri: this.state.resourcePath51.uri }}
+                                                            style={[styles.selectphoto]} resizeMode="cover" />
 
                                                         {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
                                                     </ImageBackground>
@@ -4437,14 +4486,17 @@ export default class WorkPlan extends Component {
                                         </View>
 
                                         <TouchableOpacity
-                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10,alignSelf:'center' }}>
+                                        onPress={() => this.selectFile61()}
+                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10, alignSelf: 'center' }}>
 
-                                            <View style={{ height: 80, width: '100%', flexDirection: 'row',justifyContent:'center' }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent: 'center' }}>
 
                                                 <View style={{ width: '70%', }}>
                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
                                                         {/* //onPress={() => this.imageHandler()}
                                                         style={styles.chooseButton} */}
+                                                        <Image source={{ uri: this.state.resourcePath61.uri }}
+                                                        style={[styles.selectphoto]} resizeMode="cover" />
 
                                                         {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
                                                     </ImageBackground>
@@ -4617,7 +4669,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
                                             <View style={{
-                                                height: 35, width:'100%', justifyContent: 'center',
+                                                height: 35, width: '100%', justifyContent: 'center',
                                                 //  marginBottom: 13,
                                                 // marginRight: 15,
                                                 //  justifyContent: 'flex-start',
@@ -4717,14 +4769,18 @@ export default class WorkPlan extends Component {
                                         </View>
 
                                         <TouchableOpacity
-                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10,alignSelf:'center' }}>
+                                        onPress={() => this.selectFile71()}
+                                        
+                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10, alignSelf: 'center' }}>
 
-                                            <View style={{ height: 80, width: '100%', flexDirection: 'row',justifyContent:'center' }}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent: 'center' }}>
 
                                                 <View style={{ width: '70%', }}>
                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
                                                         {/* //onPress={() => this.imageHandler()}
                                                         style={styles.chooseButton} */}
+                                                        <Image source={{ uri: this.state.resourcePath71.uri }}
+                                                            style={[styles.selectphoto]} resizeMode="cover" />
 
                                                         {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
                                                     </ImageBackground>
@@ -4821,7 +4877,7 @@ export default class WorkPlan extends Component {
 
                                 <View style={{ justifyContent: 'center', alignItems: 'center', width: 65, alignSelf: 'center', height: 100 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13,padding:5 }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, padding: 5 }}>
                                         Blocks falling
                                     </Text>
 
@@ -4831,9 +4887,9 @@ export default class WorkPlan extends Component {
 
 
 
-                                <View style={{ justifyContent: 'center', alignItems: 'center', width: 65, alignSelf: 'center',  height: 100,marginBottom:20 }}>
+                                <View style={{ justifyContent: 'center', alignItems: 'center', width: 65, alignSelf: 'center', height: 100, marginBottom: 20 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13,padding:5 }}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, padding: 5 }}>
                                         Plate Cutting
 
 
@@ -4845,9 +4901,9 @@ export default class WorkPlan extends Component {
 
                                 </View>
 
-                                <View style={{ justifyContent: 'center', alignItems: 'center', width: 65, alignSelf: 'center',marginBottom:50 }}>
+                                <View style={{ justifyContent: 'center', alignItems: 'center', width: 65, alignSelf: 'center', marginBottom: 50 }}>
 
-                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, padding:5}}>
+                                    <Text style={{ fontFamily: 'Changa-Medium', fontSize: 13, padding: 5 }}>
                                         Crane Lifting-Shifting
 
 
@@ -4924,7 +4980,7 @@ export default class WorkPlan extends Component {
 
 
 
-                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120}}>
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
 
                                             <View style={{
@@ -5080,14 +5136,17 @@ export default class WorkPlan extends Component {
                                         </View>
 
                                         <TouchableOpacity
-                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10,alignSelf:'center' }}>
+                                        onPress={() => this.selectFile81()}
+                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10, alignSelf: 'center' }}>
 
-                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent:'center'}}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent: 'center' }}>
 
                                                 <View style={{ width: '70%', }}>
                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
                                                         {/* //onPress={() => this.imageHandler()}
                                                         style={styles.chooseButton} */}
+                                                         <Image source={{ uri: this.state.resourcePath81.uri }}
+                                                        style={[styles.selectphoto]} resizeMode="cover" />
 
                                                         {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
                                                     </ImageBackground>
@@ -5360,14 +5419,19 @@ export default class WorkPlan extends Component {
                                         </View>
 
                                         <TouchableOpacity
-                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10,alignSelf:'center' }}>
+                                        onPress={() => this.selectFile91()}
 
-                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent:'center'}}>
+                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, margin: 10, alignSelf: 'center' }}>
+
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent: 'center' }}>
 
                                                 <View style={{ width: '70%', }}>
                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
                                                         {/* //onPress={() => this.imageHandler()}
                                                         style={styles.chooseButton} */}
+                                                        <Image source={{ uri: this.state.resourcePath91.uri }}
+                                                        style={[styles.selectphoto]} resizeMode="cover" />
+
 
                                                         {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
                                                     </ImageBackground>
@@ -5376,7 +5440,7 @@ export default class WorkPlan extends Component {
                                         </TouchableOpacity>
 
 
-                                        <View style={{ justifyContent:'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
+                                        <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
 
                                             {/* <TextInput
@@ -5640,14 +5704,18 @@ export default class WorkPlan extends Component {
                                         </View>
 
                                         <TouchableOpacity
-                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, alignSelf:'center' ,margin:10}}>
+                                        onPress={() => this.selectFile101()}
+                                            style={{ justifyContent: 'center', alignItems: 'center', width: 120, alignSelf: 'center', margin: 10 }}>
 
-                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent:'center'}}>
+                                            <View style={{ height: 80, width: '100%', flexDirection: 'row', justifyContent: 'center' }}>
 
                                                 <View style={{ width: '70%', }}>
                                                     <ImageBackground source={require('../assets/camera.jpg')} style={[styles.selectphoto]} resizeMode="cover">
                                                         {/* //onPress={() => this.imageHandler()}
                                                         style={styles.chooseButton} */}
+                                                        <Image source={{ uri: this.state.resourcePath101.uri }}
+                                                            style={[styles.selectphoto]} resizeMode="cover" />
+
 
                                                         {/* <Text style={{ color: '#000' }}>Choose File</Text> */}
                                                     </ImageBackground>
