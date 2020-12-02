@@ -5,7 +5,7 @@ import moment from 'moment';
 import MyPicker from '../Component/MyPicker';
 import Auth from '../service/Auth';
 import WorkColName from '../Component/WorkColName';
-import ImagePicker from 'react-native-image-crop-picker';
+// import ImagePicker from 'react-native-image-crop-picker';
 
 const { height, width } = Dimensions.get("window")
 export default class WorkPlan extends Component {
