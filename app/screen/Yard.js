@@ -1501,50 +1501,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        //  marginLeft: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade11: value })}
+value={this.state.grade11}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade11: value })}
-                          selectedValue={this.state.grade11}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
-                      {/* <Text>{this.state.grade11}</Text> */}
 
                     </View>
 
@@ -1656,49 +1629,22 @@ export default class Yard extends Component {
 
                       <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                        <View style={{
-                          height: 35, width: '100%', justifyContent: 'center',
-                          //  marginBottom: 13,
-                          // marginRight: 15,
-                          //  justifyContent: 'flex-start',
-                          alignItems: 'center',
-                          // backgroundColor: '#1273DE',
-                          // marginLeft: 20,
-                          borderWidth: 1,
-                          borderColor: 'grey',
+                      <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade12: value })}
+value={this.state.grade12}
 
-                        }}>
-                          <Picker
-                            mode="dropdown"
-                            placeholder="Type Of users"
-                            textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                            iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                            style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                            // selectedValue={this.state.selected}
-                            // onValueChange={this.onValueChange.bind(this)}
-                            onValueChange={(value) => this.setState({ grade12: value })}
-                            selectedValue={this.state.grade12}
-                          >
-
-
-
-
-                            {
-                              this.state.picker_value1.map((item, index) => {
-                                return (
-                                  <Picker.Item label={item.value} value={item.value} key={index} />
-                                )
-                              })
-                            }
-
-
-
-                          </Picker>
-
-
-                        </View>
+/>
 
                       </View>
 
@@ -1784,49 +1730,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade13: value })}
+value={this.state.grade13}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium', color: 'black' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade13: value })}
-                          selectedValue={this.state.grade13}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
 
                     </View>
 
@@ -1917,49 +1837,22 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade14: value })}
+value={this.state.grade}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade14: value })}
-                          selectedValue={this.state.grade14}
-                        >
-
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
+/>
 
                     </View>
 
@@ -2159,49 +2052,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120, }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade21: value })}
+value={this.state.grade21}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade21: value })}
-                          selectedValue={this.state.grade21}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
 
                     </View>
 
@@ -2294,49 +2161,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade22: value })}
+value={this.state.grade22}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade22: value })}
-                          selectedValue={this.state.grade22}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
 
                     </View>
 
@@ -2427,49 +2268,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade23: value })}
+value={this.state.grade23}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade23: value })}
-                          selectedValue={this.state.grade23}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
 
                     </View>
 
@@ -2560,49 +2375,22 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade24: value })}
+value={this.state.grade24}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade24: value })}
-                          selectedValue={this.state.grade24}
-                        >
-
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
+/>
 
                     </View>
 
@@ -2778,53 +2566,24 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    
+                    <TextInput
 
+                style={{
+                    width: 100, justifyContent: 'center',
+                    alignContent: 'center', alignItems: 'center',
+                    color: 'black',
+                    borderBottomColor: 'black', borderBottomWidth: 1,
+                }}
 
+                placeholder='Grading'
+                placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+                multiline={true}
+                onChangeText={(value) => this.setState({ gradeNew: value })}
+                value={this.state.gradeNew}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{
-                            width: '100%', color: 'black', height: 30,
-                            //  fontFamily: 'Changa-Medium'
-                          }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ gradeNew: value })}
-                          selectedValue={this.state.gradeNew}
-                        >
+            />
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
-                      {/* <Text>{this.state.grade71}</Text> */}
 
                     </View>
 
@@ -3057,49 +2816,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade31: value })}
+value={this.state.grade31}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade31: value })}
-                          selectedValue={this.state.grade31}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
 
                     </View>
 
@@ -3193,49 +2926,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade32: value })}
+value={this.state.grade32}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade32: value })}
-                          selectedValue={this.state.grade32}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
 
                     </View>
 
@@ -3328,49 +3035,22 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade33: value })}
+value={this.state.grade33}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade33: value })}
-                          selectedValue={this.state.grade33}
-                        >
-
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
+/>
 
                     </View>
 
@@ -3462,49 +3142,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade34: value })}
+value={this.state.grade34}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade34: value })}
-                          selectedValue={this.state.grade34}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
 
                     </View>
 
@@ -3594,49 +3248,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade35: value })}
+value={this.state.grade35}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade35: value })}
-                          selectedValue={this.state.grade35}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
 
                     </View>
 
@@ -3730,49 +3358,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade36: value })}
+value={this.state.grade36}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade36: value })}
-                          selectedValue={this.state.grade36}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
 
                     </View>
 
@@ -3859,49 +3461,22 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade37: value })}
+value={this.state.grade37}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade37: value })}
-                          selectedValue={this.state.grade37}
-                        >
-
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
+/>
 
                     </View>
 
@@ -4108,49 +3683,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade41: value })}
+value={this.state.grade41}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade41: value })}
-                          selectedValue={this.state.grade41}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
 
                     </View>
 
@@ -4242,49 +3791,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade42: value })}
+value={this.state.grade42}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade42: value })}
-                          selectedValue={this.state.grade42}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
 
                     </View>
 
@@ -4378,49 +3901,22 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade43: value })}
+value={this.state.grade43}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade43: value })}
-                          selectedValue={this.state.grade43}
-                        >
-
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
+/>
 
                     </View>
 
@@ -4510,49 +4006,22 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade44: value })}
+value={this.state.grade44}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade44: value })}
-                          selectedValue={this.state.grade44}
-                        >
-
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
+/>
 
                     </View>
 
@@ -4643,49 +4112,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade45: value })}
+value={this.state.grade45}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade45: value })}
-                          selectedValue={this.state.grade45}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
 
                     </View>
 
@@ -4862,49 +4305,22 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade51: value })}
+value={this.state.grade51}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade51: value })}
-                          selectedValue={this.state.grade51}
-                        >
-
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
+/>
 
                     </View>
 
@@ -5080,49 +4496,22 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade61: value })}
+value={this.state.grade61}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade61: value })}
-                          selectedValue={this.state.grade61}
-                        >
-
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
+/>
 
                     </View>
 
@@ -5296,53 +4685,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade71: value })}
+value={this.state.grade71}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{
-                            width: '100%', color: 'black', height: 30,
-                            //  fontFamily: 'Changa-Medium'
-                          }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade71: value })}
-                          selectedValue={this.state.grade71}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
-                      {/* <Text>{this.state.grade71}</Text> */}
 
                     </View>
 
@@ -5538,53 +4897,22 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade81: value })}
+value={this.state.grade81}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{
-                            fontSize: 12,
-                            fontFamily: 'Changa-Medium',
-                            color: 'black'
-                          }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "black", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade81: value })}
-                          selectedValue={this.state.grade81}
-                        >
-
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
+/>
 
                     </View>
 
@@ -5675,49 +5003,23 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
-                        borderWidth: 1,
-                        borderColor: 'grey',
+                    <TextInput
 
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade82: value })}
+value={this.state.grade82}
 
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade82: value })}
-                          selectedValue={this.state.grade82}
-                        >
+/>
 
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
 
                     </View>
 
@@ -5807,50 +5109,22 @@ export default class Yard extends Component {
 
                     <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
-                      <View style={{
-                        height: 35, width: '100%', justifyContent: 'center',
-                        //  marginBottom: 13,
-                        // marginRight: 15,
-                        //  justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: '#1273DE',
-                        // marginLeft: 20,
+                    <TextInput
 
-                        borderWidth: 1,
-                        borderColor: 'grey',
+style={{
+    width: 100, justifyContent: 'center',
+    alignContent: 'center', alignItems: 'center',
+    color: 'black',
+    borderBottomColor: 'black', borderBottomWidth: 1,
+}}
 
+placeholder='Grading'
+placeholderTextColor="grey" underlineColorAndroid={'transparent'}
+multiline={true}
+onChangeText={(value) => this.setState({ grade83: value })}
+value={this.state.grade83}
 
-
-                      }}>
-                        <Picker
-                          mode="dropdown"
-                          placeholder="Type Of users"
-                          textStyle={{ fontSize: 12, fontFamily: 'Changa-Medium' }}
-                          iosIcon={<Icon name="arrow-dropdown-circle" style={{ color: "white", fontSize: 15 }} />}
-                          style={{ width: '100%', color: 'black', height: 30, fontFamily: 'Changa-Medium' }}
-                          // selectedValue={this.state.selected}
-                          // onValueChange={this.onValueChange.bind(this)}
-                          onValueChange={(value) => this.setState({ grade83: value })}
-                          selectedValue={this.state.grade83}
-                        >
-
-
-
-
-                          {
-                            this.state.picker_value1.map((item, index) => {
-                              return (
-                                <Picker.Item label={item.value} value={item.value} key={index} />
-                              )
-                            })
-                          }
-
-
-
-                        </Picker>
-
-
-                      </View>
+/>
 
                     </View>
 
@@ -5943,20 +5217,6 @@ export default class Yard extends Component {
 
 
             </View>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
           </View>
 

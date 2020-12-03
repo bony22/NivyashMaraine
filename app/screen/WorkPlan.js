@@ -2375,13 +2375,7 @@ export default class WorkPlan extends Component {
                                         <View style={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center', width: 120 }}>
 
 
-                                            {/* <TextInput
-    placeholder='remarks'
-
-    multiline={true}>
-
-</TextInput> */}
-
+                                          
                                             <TextInput
 
                                                 style={{
