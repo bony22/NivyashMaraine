@@ -84,9 +84,7 @@ const MainNavigator = createStackNavigator(
        WorkPlan:WorkPlan,
        Vessel:Vessel,
        Yard:Yard,
-       Enviorment:Enviorment
-       
-    
+       Enviorment:Enviorment,
       },
       {
         initialRouteName: 'NewTab',

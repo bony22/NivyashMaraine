@@ -199,21 +199,21 @@ export default class WorkPlan extends Component {
             workplan1: {
                 status: true,
 
-                yard: {
+               
 
                     hse: this.state.hse,
 
                     site: this.state.site,
-                    hotwork: {
+                 
                         yesno: this.state.yesno,
                         rajha: this.state.rajha,
                         permit: this.state.permit,
                         subtool: this.state.subtool,
                         remark: this.state.remark,
                         action: this.state.action,
-                        resourcePath: this.state.resourcePath
+                        resourcePath: this.state.resourcePath,
 
-                    },
+                 
                     lift: {
 
                         yesno1: this.state.yesno1,
@@ -245,8 +245,8 @@ export default class WorkPlan extends Component {
                         remark3: this.state.remark3,
                         action3: this.state.action3,
                         resourcePath3: this.state.resourcePath3
-                    }
-                },
+                    },
+                
 
 
 
