@@ -9,8 +9,7 @@ import { DraweItems, createDrawerNavigator } from 'react-navigation-drawer'
 
 import LogIn from './app/screen/LogIn';
 import Launch from './app/screen/Launch';
-import AllTabs from './app/screen/AllTabs';
-import AllTab2 from './app/screen/AllTab2';
+
 import  Loader from "./app/screen/Loading/Loader";
 import NavigationService from './app/service/Navigation';
 import Auth from './app/service/Auth';
@@ -19,7 +18,7 @@ import WorkPlan from './app/screen/WorkPlan';
 import Vessel from './app/screen/Vessel';
 import Yard from './app/screen/Yard';
 import Enviorment from './app/screen/Enviorment';
-import Work from './app/screen/Work';
+
 
 
 // const ScreenStack = createStackNavigator(
